@@ -1,0 +1,164 @@
+/* -----sec02 why------------ */
+.sec02 {
+    width: 100%;
+    /* max-width: 2000px; */
+    /* margin: 0 auto; */
+    box-sizing: border-box;
+    /* height: 958px; */
+    background-color: var(--sub-color2);
+
+    /* --그라디언트 걸어놓기 */
+    position: relative;
+
+    /* animation: fadeInUp;
+    animation-duration: 3s; */
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* .sec02-title0 {} */
+
+.sec02-why {
+    /* text-align: center; */
+    /* 카드 속 행간들 설정 */
+    /* line-height: 65px; */
+}
+
+.sec02-des {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.sec02-b {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* --------sec02 카드--------- */
+/* ---------------스왑-------- */
+
+
+
+
+.benefit-card {
+    /* flex-shrink: 0; */
+    text-align: center;
+    width: 100%;
+    height: 560px;
+    padding: 40px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+}
+
+
+/* ----------스와이프sec02---- */
+/* .swiper-slide2:nth-child(2) {
+    background: var(--white-color);
+}
+
+.swiper-slide2:nth-child(3) {
+    background: var(--white-color);
+}
+
+.swiper-slide2:nth-child(4) {
+    background: var(--white-color);
+}
+
+.swiper-slide2:nth-child(5) {
+    background: var(--white-color);
+} */
+
+.sec02-num {
+    font-size: 15px;
+    padding: 10px 10px;
+    height: 28px;
+    line-height: 8px;
+    width: auto;
+
+    display: inline-block;
+    text-align: center;
+
+    background-color: var(--primary-color2);
+    border-radius: 10px;
+
+}
+
+.n5 {
+    width: 90px;
+    height: 32px;
+}
+
+.sec02-title {
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: px;
+    color: var(--black-color);
+}
+
+.sec02-des02 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 10px;
+    color: var(--gray-color1);
+}
+
+.sec02-mo-des02 {
+    display: none;
+}
+
+.sec02-warn {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--gray-color2);
+
+}
+
+/* -------------sec02-----그라디언트---------- */
+.radial02 {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* left: -270px; */
+    background: linear-gradient(270deg, #ffffff00, #b4dff2);
+    z-index: 2;
+}
+
+.radial03 {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: linear-gradient(90deg, #ffffff00, #b4dff2);
+    z-index: 2;
+}
+
+/* ----------------sec02 페이지네이션----- */
+/* .sec02 .swiper-pagination {
+    background: #cfcfcf;
+    width: 100px;
+    height: 10px;
+    border-radius: 10px;
+
+    margin: 20px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-pagination2-fill {
+    background: #ffcc00;
+    width: 40px;
+    height: 8px;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transition: left 0.3s ease;
+} */
