@@ -50,9 +50,13 @@ $(document).ready(function () {
                 spaceBetween: 20,
             },
             767: {
-                slidesPerView: 2.2,
+                slidesPerView: 2.3,
                 // spaceBetween: 20,
             },
+            319: {
+                slidesPerView: 2
+            },
+
         },
     });
 
@@ -64,22 +68,22 @@ $(document).ready(function () {
         let scroll03 = $(window).scrollTop() + $(window).height();
         let sec03Pos = $('.sec03').offset().top;
 
-        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.1)) {
+        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.25)) {
             $('.tab-contants').addClass('animate__animated animate__fadeInUp');
             $(".tab-contants").addClass("active");
         }
 
         // --------sec04등장
 
-        let scroll04 = $(window).scrollTop() + $(window).height();
-        // 섹션의 위쪽 위치
-        let sec04Pos = $('.sec04').offset().top;
+        // let scroll04 = $(window).scrollTop() + $(window).height();
+        // // 섹션의 위쪽 위치
+        // let sec04Pos = $('.sec04').offset().top;
 
-        // .sec03의 20% 지점쯤 화면에 들어오면 실행
-        if (scroll04 > sec04Pos + ($('.sec04').height() * 0.3)) {
-            $('.sec04-card-wrap').addClass('animate__animated animate__slideInRight');
-            $(".sec04-card-wrap").addClass("active2");
-        }
+        // // .sec03의 20% 지점쯤 화면에 들어오면 실행
+        // if (scroll04 > sec04Pos + ($('.sec04').height() * 0.3)) {
+        //     $('.sec04-card-wrap').addClass('animate__animated animate__slideInRight');
+        //     $(".sec04-card-wrap").addClass("active2");
+        // }
     });
 
     //----------sec03 버튼 클릭 효과
@@ -102,23 +106,27 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        slidesPerView: 1.6,
+        slidesPerView: 1,
         spaceBetween: 40,
         direction: 'horizontal',
         loop: true,
-
+        centeredSlides: true,
         breakpoints: {
             1200: {
-                slidesPerView: 4,
+                slidesPerView: 4.4,
 
             },
 
             1023: {
-                slidesPerView: 3,
+                slidesPerView: 3.5,
 
             },
-            767: {
-                slidesPerView: 2.4,
+            479: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            0: {
+                slidesPerView: 1.5,
                 spaceBetween: 20,
             }
         },
@@ -161,7 +169,7 @@ $(document).ready(function () {
         //이하가 아니라 이상일때
         breakpoints: {
             1161: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 20,
             },
             1023: {

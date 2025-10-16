@@ -78,6 +78,12 @@
 
 
 /* --------------------commend--------------------- */
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -266,7 +272,7 @@ button {
     text-align: right;
     color: #5C3119;
     font-weight: 500;
-    font-size: 54px;
+    font-size: 45px;
 }
 
 .sec01-visual {
@@ -285,9 +291,9 @@ button {
 
 }
 
-.sec01 .visual-slide img {
-    max-width: 420px;
-    /* height: 100%; */
+.visual-slide img {
+    width: 100%;
+    max-width: 400px;
     object-fit: cover;
 }
 
@@ -303,16 +309,17 @@ button {
     width: 100%;
     border-radius: 20px;
     margin-bottom: 20px;
-    padding: 20px 40px;
+    padding: 20px 30px;
 
     height: 160px;
     border: 1px solid var(--gray-color2);
     background-color: var(--white-color);
+    justify-content: center;
 }
 
 .kv-CTA1 img {
     scale: 0.8;
-    margin-left: 2;
+    margin-left: 4px;
 
     object-fit: cover;
 }
@@ -336,11 +343,15 @@ button {
     font-weight: 600;
     letter-spacing: 4px;
 
-    padding: 5px 73px;
+    padding: 5px 0;
+
+    width: 100%;
     max-width: 226px;
     border-radius: 10px;
+
     border: none;
     background-color: var(--white-color);
+
 }
 
 .ask1 {
@@ -445,7 +456,7 @@ button {
     text-align: center;
     width: 100%;
     max-height: 560px;
-    padding: 60px;
+    padding: 40px;
     background-color: var(--white-color);
     border-radius: 20px;
 
@@ -563,7 +574,7 @@ button {
     display: flex;
     justify-content: center;
     text-align: center;
-    gap: 60px;
+    gap: 30px;
     font-size: 20px;
 
     padding: 20px 0 40px 0;
@@ -571,21 +582,23 @@ button {
     transform: translate(0.2s all ease-in-out);
 }
 
-.sec03-tab :hover {
-    color: var(--black-color);
-    background-color: var(--primary-color1);
-    border: none;
-}
 
 .btn3 {
     font-size: 18px;
     background-color: none;
     padding: 10px 15px;
-    border: 2px solid #a3a3a3;
+    border: 1px solid #a3a3a3;
     border-radius: 30px;
     color: var(--gray-color1);
+    cursor: pointer;
 }
 
+.btn3:hover,
+.btn3.on {
+    color: var(--black-color);
+    background-color: var(--primary-color1);
+    border-color: var(--primary-color1);
+}
 
 .sec03-phone-list {
     display: flex;
@@ -599,21 +612,22 @@ button {
 
 .sec03-item {
     width: calc((100% - 440px) / 12 * 6 + 200px);
-    border: 2px solid var(--gray-color2);
+    /* border: 1px solid var(--gray-color2); */
+    box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     padding: 40px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #fff;
-
-    transform: translate(0.2s all ease-in-out);
+    /* transform: translate(0.2s all ease-in-out); */
+    transition: 0.2s all ease-in-out;
 }
 
 .sec03-item:hover {
-    border: 4px solid var(--primary-color1);
+    /* border: 1px solid var(--primary-color1); */
+    box-shadow: inset 0 0 0 2px var(--primary-color1);
 }
 
 .sec03-item img {
@@ -639,20 +653,15 @@ button {
 .sec03-btn4 {
     display: block;
     margin: 40px auto 0;
-
-    letter-spacing: 03px;
-    padding: 10px 30px;
-    border-radius: 30px;
-    border: 2px solid var(--gray-color-sub);
-    color: var(--gray-color-sub);
-
-    transform: translate(0.2s all ease-in-out);
+    text-decoration: underline;
+    letter-spacing: -0.3px;
+    border: 0;
+    color: var(--gray-color1);
+    transition: .2s all ease-in-out;
 }
 
 .sec03-btn4:hover {
     color: var(--black-color);
-    background-color: #ffc800;
-    border: none;
 }
 
 /* --------버튼 효과 넣기 위한 안보이게 하기 */
@@ -671,14 +680,15 @@ button {
     margin: 0 auto;
 }
 
+/* 
 .sec04-card-wrap {
     opacity: 0;
-}
-
+} */
+/* 
 .active2 {
     opacity: 1;
     animation-duration: 3s;
-}
+} */
 
 .container4 {
     width: 100%;
@@ -711,18 +721,21 @@ button {
     padding: 40px;
 
     background-color: var(--white-color);
-    border: 2px solid var(--gray-color-sub);
+    /* border: 2px solid var(--gray-color-sub); */
+    box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
+    transition: .2s all ease-in-out;
 
 }
 
 .sec04-card img {
-    width: 227px;
-    height: 160px;
+    width: 100%;
+    height: 50%;
 }
 
 .sec04-card:hover {
-    border: 4px solid var(--primary-color1);
+    box-shadow: inset 0 0 0 2px var(--primary-color1);
+    /* border: 4px solid var(--primary-color1); */
 }
 
 .sec04-card-des {
@@ -751,7 +764,7 @@ button {
 
 .sec04-card-wrap {
     overflow: hidden;
-    height: 500px;
+    max-height: 500px;
 }
 
 .sec04-card {
@@ -760,12 +773,17 @@ button {
     margin-right: 30px;
 }
 
+/* .sec04-btn {
+    display: none;
+} */
+
+
 .swiper-button-next,
 .swiper-button-prev {
     justify-content: space-between;
     align-items: center;
     color: var(--gray-color-sub);
-    margin-top: 60px;
+    transform: translateY(-20px);
 
 }
 
@@ -786,7 +804,7 @@ button {
 
 .sec05-h2 {
     width: 250px;
-    height: 50px;
+    height: 80px;
 
     text-align: center;
     font-size: 24px;
@@ -841,7 +859,7 @@ button {
     padding: 0 10px;
 }
 
-/* --------------------sec06------------------------ */
+/* ----------------sec06------------------- */
 
 
 .sec06 {
@@ -912,11 +930,12 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
 .sec06-kind input,
-select {
+.select {
     font-size: 15px;
     border: 1px solid var(--gray-color-sub);
     padding: 10px 10px;
@@ -1291,8 +1310,8 @@ select {
 
     .sec04-card>img {
         width: 100%;
-        max-width: 260px;
-        height: 160px;
+        /* max-width: 260px; */
+        height: 50%;
         padding: 0;
     }
 
@@ -1412,6 +1431,7 @@ select {
         padding: 20px 20px;
     }
 
+    /* ---------1160 풋터 */
     .footer {
         width: 100%;
         max-width: 1160px;
@@ -1452,13 +1472,17 @@ select {
         max-width: 1024px;
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 0 90px;
+        padding: 0 60px;
     }
 
     .sec01 {
         width: 100%;
         height: 588px;
-        padding: 60px 0;
+        padding: 60px 0 60px 0;
+    }
+
+    .visual-slide>img {
+        scale: 0.9;
     }
 
     .sec01-minbox1 {
@@ -1466,19 +1490,19 @@ select {
     }
 
     .kv-CTA1 img {
-        scale: 0.8;
+        scale: 0.7;
     }
 
     .sec01-visual {
         width: 100%;
-        height: 100%;
+        height: 328px;
+        /* height: 100%; */
         border-radius: 20px;
         background-color: #FFDF70;
         overflow: hidden;
     }
 
     .visual-swiper {
-        height: 328px;
         margin-bottom: 40px;
     }
 
@@ -1493,11 +1517,24 @@ select {
 
     .kv-text1 {
         font-weight: 500;
-        font-size: 45px;
+        font-size: 40px;
+    }
+
+    .kv-cta {
+        padding: 5px 0px;
     }
 
     /* -----kv 다시체크하기 */
+
+    .benefit-card {
+        margin-top: 20px;
+    }
+
     /* --------1024--sec04----- */
+    .sec04 {
+        padding: 60px 0;
+        height: 670px;
+    }
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -1684,7 +1721,6 @@ select {
 
     .kv-cta {
         margin-top: 10px;
-        padding: 5px 40px;
     }
 
     .des1 {
@@ -1714,8 +1750,476 @@ select {
 
     /* --------768 sec03 시작하기*/
 
+    .sec03 {
+        height: 1080px;
+    }
 
+    .sec03-phone-list {
+        gap: 20px;
+    }
+
+    .sec03-tab {
+        gap: 40px;
+    }
+
+    .btn3 {
+        font-size: 13px;
+        padding: 5px 15px;
+    }
+
+    .sec03-item {
+        width: calc((100%-100px) / 6 * 3 + 40px);
+        padding: 40px;
+        height: 390px;
+
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+
+    .sec03-item img {
+        max-width: 350px;
+        max-height: 150px;
+        margin-bottom: 10px;
+        object-fit: cover;
+
+    }
+
+    .sec03-des {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .sec03-des img {
+        max-width: 150px;
+        padding-bottom: 10px 0 5px 0;
+    }
+
+    .sec03-btn4 {
+        letter-spacing: 01px;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid var(--gray-color-sub);
+    }
+
+    /* ---------768 sec04 */
+    .sec04 {
+        width: 100%;
+        max-width: 768px;
+        height: 640px;
+    }
+
+    .sec04-title {
+        line-height: 35px;
+        padding-bottom: 20px;
+    }
+
+    .sec04-T {
+        padding-bottom: 0;
+    }
+
+    .sub-title2 {
+        font-size: 18px;
+    }
+
+    .sec04-mo {
+        font-size: 16px;
+        color: var(--gray-color1);
+    }
+
+    .sec04-card {
+        padding: 20px;
+    }
+
+    .sec04-card>img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .des04 {
+        line-height: 20px;
+        height: 80px;
+        font-size: 13px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        scale: 0.4;
+        margin: 150px 270px 270px;
+        display: block;
+    }
+
+    /* -------768--live/ ask------------- */
+    .sec05 {
+        display: none;
+    }
+
+    .sec06-item input {
+        font-size: 14px;
+
+    }
+
+    .sec06-img {
+        display: none;
+    }
+
+    .sec06-box {
+        margin-left: 40px;
+    }
+
+    .select {
+        margin: 0;
+        margin-top: 10px;
+        height: 39px;
+    }
+
+    .sec06-btn {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+
+
+    /* -------------풋터 */
+    .footer-bottom {
+        padding: 0 0 40px 0;
+    }
+
+    .footer-right {
+        display: none
+    }
+
+    .footer-right2 {
+        display: none;
+    }
 
     /* -------1024 sec01 sec02카드 다듬기 sec03만들기 밑에서부터 위로 확인하기 */
-    /* 768부터 480 남음 */
+    /* sec06 kind 다시 췍 */
+    /* 480 남음 */
+}
+
+@media(max-width:480px) {
+
+    .container {
+        width: 100%;
+        max-width: 480px;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .header-container {
+        width: 100%;
+        height: 50px;
+    }
+
+    /* ----------480-------sec01 */
+    .sec01 {
+        width: 100%;
+        max-width: 480px;
+        padding: 0px 0 20px 0;
+        height: 375px;
+    }
+
+    .sec01-kv {
+        height: 355px;
+    }
+
+    .sec01-visual {
+        height: 200px;
+    }
+
+    .visual-wrapper {
+        height: 160px;
+
+    }
+
+    .visual-slide img {
+        width: 200px;
+        height: 200px;
+        scale: 0.9;
+        padding: 20px 0 20px 10px;
+        object-fit: cover;
+    }
+
+    .kv-text0 {
+        padding: 40px 20px 0px 0;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .kv-text1 {
+        font-size: 24px;
+        width: 280;
+    }
+
+    .swiper-pagination {
+        scale: 0.8;
+    }
+
+    .sec01-minbox1 {
+        padding: 0 5px 0 0;
+    }
+
+    .sec01-sub {
+        letter-spacing: 4px;
+        padding: 0 5px;
+        font-size: 14px;
+    }
+
+    .kv-CTA1 {
+        padding: 5px auto;
+    }
+
+    .kv-CTA1 img {
+        width: 88px;
+        height: 84px;
+
+    }
+
+    .kv-cta {
+        width: 100%;
+        max-width: 90px;
+        font-size: 14px;
+        /* padding: 5px 10px; */
+    }
+
+    /* ----------480--sec02 */
+    .sec02 {
+        padding: 20px 0;
+        /* height: 500px; */
+    }
+
+    .sec02-title0 {
+        padding: 0;
+        line-height: 10px;
+    }
+
+    .sec02-num {
+        margin-bottom: 5px;
+    }
+
+    .sec02-des {
+        font-size: 14px;
+    }
+
+    .sec02-b {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* --------------480 02card----- */
+    .sec02 {
+        height: 555px;
+    }
+
+    .sec02-slide {
+        /* line-height: 20px; */
+        padding: 20px;
+    }
+
+    .benefit-card {
+        margin-top: 20px;
+        padding: 20px;
+        height: 430px;
+    }
+
+    .benefit-card img {
+        /* scale: 0.7; */
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .sec02-title {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .sec02-des02 {
+        line-height: 20px;
+    }
+
+    /* -------sec02 그라디언트--------- */
+
+    .radial02 {
+        width: 150px;
+    }
+
+    .radial03 {
+        width: 150px;
+    }
+
+    /* -------480---------sec03 */
+    .sec03 {
+        height: 554px;
+        padding: 20px 0;
+    }
+
+    .sec03-title {
+        padding: 0;
+    }
+
+    .sec03-item {
+        width: 100%;
+        max-width: 440;
+        padding: 20px;
+        height: 174px;
+
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .sec03-item img {
+        max-width: 50%;
+        max-height: 135px;
+        object-fit: cover;
+
+    }
+
+    .sec03-des {
+        text-align: right;
+        width: 40%;
+    }
+
+    .sec03-des img {
+        transform: translateX(15px);
+        scale: 0.8;
+        max-width: 130px;
+        padding: 5px 0 5px 0;
+    }
+
+    .sec03-1160s {
+        font-size: 18px;
+    }
+
+    .font-des1 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .sub-title2 {
+        font-size: 18px;
+    }
+
+    .sec03-item:nth-child(3),
+    .sec03-item:nth-child(4) {
+        display: none;
+    }
+
+    .sec03-btn4 {
+        letter-spacing: 0px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    /* ----- 480--sec04 */
+    .sec04 {
+        padding: 20px 0;
+        height: 500px;
+    }
+
+    .sec04-title {
+        line-height: 24px;
+    }
+
+    .sec04-T {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .sec04-card>img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .sec04-card-list {
+        height: 480px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sec04-card {
+        padding: 20px;
+        height: 340px;
+        margin: 0;
+    }
+
+    .name {
+        padding: 0;
+    }
+
+    .sec04-mo {
+        font-size: 14px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 80px;
+        scale: 0.4;
+        margin: 95px 120px 0 140px;
+        /* margin: 0 auto; */
+    }
+
+    /* ------------------480 sec06 */
+    .sec06 {
+        height: 400px;
+        padding: 20px 0;
+    }
+
+    .sec06-title {
+        line-height: 30px;
+        padding: 10px 0 0 0;
+        margin-bottom: 10px;
+    }
+
+    .sec06-title>h4 {
+        font-size: 16px;
+    }
+
+    .sec06-title>h2 {
+        font-size: 18px;
+    }
+
+    .sec06-box {
+        width: 450px;
+        margin-left: 20px;
+        height: 360px;
+        padding: 20px;
+        line-height: 10px;
+    }
+
+    .sec06-item>input {
+        margin: 0;
+    }
+
+    .sec06-kind {
+        margin: 0 auto;
+        /* margin-left: 20px; */
+    }
+
+    .sec06-ask {
+        padding: 0;
+    }
+
+    .sec06-btn {
+        width: 340px;
+        padding: 10px 60px;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+
+    /* --------480--footer----------- */
+    .footer {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .footer-bottom>p {
+        padding: 0;
+    }
+
 }

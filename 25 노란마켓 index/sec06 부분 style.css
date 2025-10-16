@@ -1,0 +1,294 @@
+/* ----------------sec06------------------- */
+
+
+.sec06 {
+    background-color: var(--sub-color1);
+}
+
+.sec06-ask {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 100px 70px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec06-img {
+    width: 450px;
+    height: 560px;
+
+    background-image: url(../image/병아리\ 문의\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sec06-box {
+
+    width: 580px;
+
+    text-align: center;
+    line-height: 40px;
+
+    background-color: var(--white-color);
+    border-radius: 20px;
+    padding: 80px;
+}
+
+.sec06-box h2 {
+    font-size: 40px;
+}
+
+.sec06-box h4 {
+    font-size: 30px;
+}
+
+.sec06-title {
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.sec06-input {
+    border: none;
+    outline: none;
+    color: #a3a3a3;
+}
+
+.sec06-item input {
+    width: 420px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid var(--gray-color-sub);
+    margin: 10px 0;
+    line-height: 10px;
+}
+
+.sec06-kind {
+    display: flex;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.sec06-kind input,
+.select {
+    font-size: 15px;
+    border: 1px solid var(--gray-color-sub);
+    padding: 10px 10px;
+    border-radius: 15px;
+    color: var(--gray-color1);
+    width: 190px;
+    margin: 10px 0;
+
+}
+
+.sec06 input:focus,
+.sec06 select:focus {
+    outline: none;
+    border: 2px solid var(--primary-color1);
+}
+
+.sec06-btn {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+
+    background-color: var(--primary-color1);
+    border: none;
+    border-radius: 20px;
+    width: 420px;
+    padding: 20px 20px;
+}
+
+.sec06-btn:hover {
+    color: var(--white-color);
+
+}
+
+@media(max-width:1160px) {
+
+    /* -----1160 sec06----- */
+    .sec06 {
+        width: 100%;
+        max-width: 1160px;
+        padding: 60px 0;
+    }
+
+    .sec06-ask {
+        margin: 0 auto;
+        padding: 0 90px 0px 90px;
+    }
+
+    .sec06-img {
+
+        width: 400px;
+        height: 500px;
+        scale: 0.9;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .sec06-box {
+        width: 500px;
+        height: 470px;
+        line-height: 40px;
+        padding: 40px;
+    }
+
+    .sec06-box h2 {
+        font-size: 30px;
+    }
+
+    .sec06-box h4 {
+        font-size: 20px;
+    }
+
+    .sec06-title {
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .sec06-item input {
+        width: 360px;
+    }
+
+    .sec06-kind {
+        width: 360px;
+        margin-left: 30px;
+        gap: 20px;
+    }
+
+    .sec06-kind>input,
+    .select {
+        font-size: 15px;
+        border-radius: 15px;
+        width: 160px;
+        margin: 0 0 0 30px;
+    }
+
+    .sec06-btn {
+        font-size: 18px;
+        font-weight: 500;
+
+        width: 360px;
+        padding: 20px 20px;
+    }
+
+}
+
+@media(max-width:1024px) {
+
+    /* -------------1024---ask---- */
+    .sec06 {
+        width: 100%;
+        max-width: 1024px;
+        height: 548px;
+        margin: 0 auto;
+    }
+
+    .sec06-ask {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 0 90px 0 90px;
+    }
+
+    .sec06-title {
+        line-height: 40px;
+    }
+
+    .sec06-img {
+        width: 310px;
+        height: 407px;
+    }
+
+    .sec06-box {
+        height: 426px;
+        padding: 20px;
+        line-height: 30px;
+    }
+
+    .sec06-item input {
+        width: 340px;
+
+    }
+
+    .sec06-kind {
+        width: 340px;
+        margin-left: 60px;
+    }
+
+    .sec06-btn {
+        padding: 20px 20px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .sec06-item input {
+        font-size: 14px;
+
+    }
+
+    .sec06-img {
+        display: none;
+    }
+
+    .sec06-box {
+        margin-left: 40px;
+    }
+}
+
+@media(max-width:480px) {
+
+    .sec06 {
+        height: 400px;
+        padding: 20px 0;
+    }
+
+    .sec06-title {
+        line-height: 30px;
+        padding: 10px 0 0 0;
+        margin-bottom: 10px;
+    }
+
+    .sec06-title>h4 {
+        font-size: 16px;
+    }
+
+    .sec06-title>h2 {
+        font-size: 18px;
+    }
+
+    .sec06-box {
+        width: 450px;
+        margin-left: 20px;
+        height: 360px;
+        padding: 20px;
+        line-height: 10px;
+    }
+
+    .sec06-item>input {
+        margin: 0;
+    }
+
+    .sec06-kind {
+        margin: 0 auto;
+        /* margin-left: 20px; */
+    }
+
+    .sec06-ask {
+        padding: 0;
+    }
+
+    .sec06-btn {
+        width: 340px;
+        padding: 10px 60px;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+}
