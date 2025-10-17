@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     let swiper = new Swiper(".visual-swiper", {
         pagination: {
-            el: ".swiper-pagination",
+            el: ".visual-swiper .swiper-pagination",
         },
         loop: true,
         // autoplay: true
@@ -34,29 +34,31 @@ $(document).ready(function () {
     let swiper02 = new Swiper(".mySwiper2", {
 
         slidesPerView: 1.5,
-        spaceBetween: 40,
-        autoplay: true,
+        spaceBetween: 20,
+        // autoplay: true,
         centeredSlides: true,
+        loop: true,
+    loopedSlides: 2,
         breakpoints: {
 
             1023: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 30,
             },
             767: {
                 slidesPerView: 2.3,
-
+                spaceBetween: 20,
             },
             560: {
                 slidesPerView: 2
             },
-            352: {
-                slidesPerView: 1.8,
+            // 420: {
+            //     slidesPerView: 1.5,
 
-            },
-            0: {
-                slidesPerView: 1,
-            },
+            // },
+            // 0: {
+            //     slidesPerView: 1,
+            // },
 
         },
     });
@@ -104,13 +106,12 @@ $(document).ready(function () {
 
     let swiper04 = new Swiper(".mySwiper4", {
 
-        cssMode: true,
+        // cssMode: true,
         pagination: {
-            el: ".swiper-pagination",
+            el: ".mySwiper4 .swiper-pagination",
         },
-        slidesPerView: 1,
-        spaceBetween: 40,
-        direction: 'horizontal',
+        // slidesPerView: 1,
+        spaceBetween: 30,
         loop: true,
         // centeredSlides: true,
         breakpoints: {
@@ -128,33 +129,29 @@ $(document).ready(function () {
             },
             600: {
                 slidesPerView: 2.5,
-                spaceBetween: 20,
             },
             550: {
                 slidesPerView: 1.7,
-                spaceBetween: 20,
             },
             371: {
                 slidesPerView: 1.6,
-                spaceBetween: 20,
             },
             0: {
                 slidesPerView: 1.4,
-                spaceBetween: 20,
             },
         },
     });
 
     //    ----------------SEC04 버튼
-    $(".swiper-button-next, .swiper-button-prev")
-        .on("click", function () {
-            let btn04 = $(this);
+    // $(".swiper-button-next, .swiper-button-prev")
+    //     .on("click", function () {
+    //         let btn04 = $(this);
 
-            btn04.css("color", "#ffc800");
-            setTimeout(function () {
-                $(btn04).css("color", "#717071");
-            }, 100);
-        });
+    //         btn04.css("color", "#ffc800");
+    //         setTimeout(function () {
+    //             $(btn04).css("color", "#717071");
+    //         }, 100);
+    //     });
 
 
     // ----------------sec05 슬라이드 효과

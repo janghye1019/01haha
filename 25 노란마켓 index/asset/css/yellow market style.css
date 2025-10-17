@@ -96,8 +96,8 @@ html {
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 :root {
@@ -183,6 +183,10 @@ button {
     font-weight: 400;
 }
 
+/* swiper  */
+.swiper-pagination-bullet-active {
+    background: #ffc800;
+}
 
 /* --------------header------------------------ */
 .header {
@@ -200,19 +204,14 @@ button {
 }
 
 .header-container {
-
     width: 100%;
-
     position: fixed;
-
     top: 0;
     left: 0;
     right: 0;
-
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid var(--gray-color2);
     padding: 10px 0;
-
 }
 
 .logo img {
@@ -233,38 +232,30 @@ button {
 .header-nav {
     display: flex;
     justify-content: end;
-
     font-size: 20px;
     font-weight: 600;
     gap: 60px;
     list-style-type: none;
-
     z-index: 5;
 }
-
 
 /* --------------sec01 kv--------------------------- */
 .sec01 {
     width: 100%;
-    padding: 60px 0 100px 0;
-    height: 730px;
+    padding: 100px 0;
+    /* height: 730px; */
 }
 
 .sec01-kv {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 60px 0;
-    max-height: 344px;
-    gap: 40px;
-
+    gap: 20px;
 }
 
 .kv-text0 {
     font-weight: 700;
     text-align: right;
     color: #5C3119;
-    padding: 40px 40px 20px 0;
-    line-height: 70px;
 }
 
 .kv-text1 {
@@ -273,12 +264,13 @@ button {
     color: #5C3119;
     font-weight: 500;
     font-size: 45px;
+    line-height: 1.3;
+    margin-top: 15px;
 }
 
 .sec01-visual {
     /* 가터40px *11 = 440px , 그리드 갯수만큼 가터빼기 */
     width: calc((100% - 440px) / 12 * 8 + 280px);
-    height: 100%;
     border-radius: 20px;
     background-color: #FFDF70;
     overflow: hidden;
@@ -287,41 +279,43 @@ button {
 .sec01 .visual-slide {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
+.visual-swiper {
+    height: 100%;
+}
 .visual-slide img {
-    width: 100%;
-    max-width: 400px;
+    width: 50%;
+    max-width: 350px;
     object-fit: cover;
 }
 
 /* -------sec01 버튼칸------------ */
 .sec01-box {
-    width: calc((100% - 440px) / 12 * 4 + 120px);
-    gap: 40px;
-    text-align: center
+    width: calc((100% - 440px) / 12 * 4 + 140px);
+    text-align: center;
 }
 
 .kv-CTA1 {
     display: flex;
     width: 100%;
     border-radius: 20px;
-    margin-bottom: 20px;
-    padding: 20px 30px;
-
+    padding: 20px 0;
     height: 160px;
     border: 1px solid var(--gray-color2);
     background-color: var(--white-color);
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.kv-CTA1:first-child {
+    margin-bottom: 20px;
 }
 
 .kv-CTA1 img {
-    scale: 0.8;
-    margin-left: 4px;
-
-    object-fit: cover;
+    width: clamp(90px, 7.1428vw ,100px);
 }
 
 .sec01-minbox1 {
@@ -390,6 +384,7 @@ button {
     height: 165px;
     background-color: var(--sub-color1);
     border-radius: 20px;
+    margin-top: 60px;
 }
 
 .sec01-box2 img {
@@ -517,18 +512,21 @@ button {
     color: var(--gray-color2);
 }
 
-.swiper-pagination {
+.sec02 .swiper-pagination {
     margin: 0 auto;
     width: 100px;
 }
-
-/* .swiper-scrollbar {
-    color: var(--gray-color1);
+.sec02 .swiper-slide {
+    opacity: 0.7;
+    transform: scale(0.95);
+    transition: .2s all ease-in-out;
+    
+}
+.sec02 .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
 }
 
-.swiper-scrollbar-drag {
-    color: var(--primary-color1);
-} */
 
 /* -------------sec02-----그라디언트---------- */
 .radial02 {
@@ -620,6 +618,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     background-color: #fff;
     /* transform: translate(0.2s all ease-in-out); */
     transition: 0.2s all ease-in-out;
@@ -630,14 +629,15 @@ button {
     box-shadow: inset 0 0 0 2px var(--primary-color1);
 }
 
-.sec03-item img {
+.sec03-item > img {
     max-width: 265px;
-    max-height: 220px;
+    width: 50%;
 }
 
 .sec03-des {
-    padding: 20px;
+    /* padding: 20px; */
     text-align: right;
+    width: 50%;
 }
 
 .sec03-des img {
@@ -674,19 +674,7 @@ button {
 /* --------------sec04 review----------------------- */
 
 .sec04 {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1448px;
-    margin: 0 auto;
-}
-
-.container4 {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 100px 0;
 }
 
 .sec04-T {
@@ -695,23 +683,17 @@ button {
 
 .sec04-title {
     text-align: center;
-    padding: 80px 0 40px 0;
+    padding: 0 0 40px 0;
 }
 
 .sec04-card-list {
-    margin-left: 22px;
-    display: flex;
-    padding-bottom: 120px;
+    margin-bottom: 50px;
 }
 
 .sec04-card {
     text-align: left;
-    width: 307px;
-    height: 389px;
     padding: 40px;
-
     background-color: var(--white-color);
-    /* border: 2px solid var(--gray-color-sub); */
     box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     transition: .2s all ease-in-out;
@@ -728,9 +710,9 @@ button {
     /* border: 4px solid var(--primary-color1); */
 }
 
-.sec04-card-des {
+/* .sec04-card-des {
     line-height: 25px;
-}
+} */
 
 .sec04-card-des img {
     width: 100px;
@@ -741,51 +723,30 @@ button {
 
 .des04 {
 
-    height: 100px;
+    /* height: 100px; */
     overflow: hidden;
     margin-top: 3px;
     font-size: 15px;
+    text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 /* ----------------sec04 스왑----------- */
-.sec04-card-list {
-    display: flex;
-    padding: 0 0 0px 0;
-    margin-bottom: 120px;
-}
 
-.sec04-card-wrap {
-    overflow: hidden;
-    max-height: 500px;
-}
+/* .mySwiper4 .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -20px;
+} */
 
-.sec04-card {
-    justify-content: center;
-    align-items: center;
-    margin-right: 30px;
-}
-
-/* 
-.sec04-btn { 
-    
- }  */
-
-
-.sec04-dot {
-    margin-bottom: 60px;
-}
-
-.swiper-pagination-bullet-active {
-    background: #ffc800;
-    /* margin-bottom: 100px; */
-}
 
 /* --------------sec05 ask or inquiry------------- */
 
 .sec05 {
     width: 100%;
     background-color: #ffde66;
-    height: 100px;
+    /* height: 100px; */
     padding: 20px;
 
     display: flex;
@@ -988,15 +949,15 @@ button {
 
 .footer {
     width: 100%;
-    height: 302px;
+    /* height: 302px; */
     background-color: var(--white-color);
     padding: 60px 0 0 0;
 }
 
 .footer-wrap {
-    margin: 0 auto;
+    /* margin: 0 auto;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1400px; */
 
     display: flex;
     justify-content: space-between;
@@ -1035,8 +996,8 @@ button {
 }
 
 .footer-right {
-    width: 284px;
-    line-height: 30px;
+    width: 30%;
+    max-width: 284px;
 }
 
 .icon06 {
@@ -1079,7 +1040,7 @@ button {
         max-width: 1160px;
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 0 90px;
+        /* padding: 0 90px; */
     }
 
     /* .header,
@@ -1087,9 +1048,9 @@ button {
         height: 80px;
     } */
 
-    .header {
+    /* .header {
         height: 80px;
-    }
+    } */
 
     .header-nav {
         font-size: 18px;
@@ -1099,13 +1060,13 @@ button {
     /* -----1160--sec01 kv------------ */
     .sec01 {
         width: 100%;
-        height: 640px;
+        /* height: 640px; */
     }
 
     .sec01-kv {
         display: flex;
         flex-wrap: wrap;
-        max-height: 328px;
+        /* max-height: 328px; */
         gap: 20px;
 
     }
@@ -1119,13 +1080,13 @@ button {
     }
 
     .visual-wrapper {
-        height: 328px;
-        margin-bottom: 40px;
+        /* height: 328px; */
+        /* margin-bottom: 40px; */
     }
 
     .visual-swiper img {
         width: 50%;
-        height: 100%;
+        /* height: 100%; */
         padding: 0 0 10px;
         object-fit: cover;
     }
@@ -1136,7 +1097,7 @@ button {
 
 
     .kv-text0 {
-        padding: 60px 40px 20px;
+        /* padding: 60px 40px 20px; */
         line-height: 70px;
     }
 
@@ -1157,11 +1118,15 @@ button {
         flex: 1;
         min-width: 0;
         border-radius: 20px;
-        padding: 20px 40px;
+        /* padding: 20px 40px; */
         border: 1px solid var(--gray-color2);
         background-color: var(--white-color);
         display: flex;
-        justify-content: space-evenly;
+        height: auto;
+        /* justify-content: space-evenly; */
+    }
+    .kv-CTA1:first-child {
+        margin-bottom: 0;
     }
 
     .sec01-minbox1 {
@@ -1208,7 +1173,6 @@ button {
     }
 
     .benefit-card>img {
-        scale: 0.8;
         object-fit: cover;
     }
 
@@ -1238,8 +1202,6 @@ button {
         padding: 60px 0;
         margin: 0 auto;
         width: 100%;
-        /* 높이값 확인하고 주기 */
-        height: 753px;
 
     }
 
@@ -1267,22 +1229,24 @@ button {
 
     .sec03-item {
         width: calc((100% - 140px) / 8 * 4 + 60px);
-        height: 213px;
+        /* height: 213px; */
+        padding: 25px;
+        gap: 10px;
     }
 
-    .sec03-item img {
+    .sec03-item > img {
         max-width: 190px;
-        max-height: 133px;
+        width: clamp(150px, 18.5546vw, 190px);
     }
 
     .sec03-1160s {
         font-size: 20px;
     }
 
-    .sec03-des {
+    /* .sec03-des {
         padding: 0 0 0 40px;
         text-align: right;
-    }
+    } */
 
     .sec03-des img {
         max-width: 120px;
@@ -1313,10 +1277,6 @@ button {
         overflow: hidden;
     }
 
-    .container4 {
-        position: relative;
-    }
-
     .sec04-title {
         text-align: center;
         padding: 0 0 40px 0;
@@ -1325,7 +1285,7 @@ button {
     .sec04-card>img {
         width: 100%;
         /* max-width: 260px; */
-        height: 50%;
+        /* height: 50%; */
         padding: 0;
     }
 
@@ -1334,7 +1294,7 @@ button {
     }
 
     .des04 {
-        height: 80px;
+        /* height: 80px; */
         overflow: hidden;
         margin-top: 3px;
         font-size: 15px;
@@ -1383,7 +1343,6 @@ button {
 
         width: 400px;
         height: 500px;
-        scale: 0.9;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1426,14 +1385,9 @@ button {
     .footer {
         width: 100%;
         max-width: 1160px;
-        height: 302px;
-        padding: 40px 90px;
+        /* height: 302px; */
+        padding: 40px 0;
         font-size: 13px;
-    }
-
-    .footer-wrap {
-        max-width: 1160px;
-        padding: 0 0px;
     }
 
     .footer-left {
@@ -1447,14 +1401,6 @@ button {
 
 }
 
-/* ----------------1080----------------- */
-@media(max-width:1080px) {
-
-    .sec01-sub-des {
-        display: none;
-    }
-}
-
 /* ------------1024------------ */
 @media(max-width:1024px) {
 
@@ -1463,25 +1409,16 @@ button {
         max-width: 1024px;
         box-sizing: border-box;
         margin: 0 auto;
-        padding: 0 60px;
+        /* padding: 0 60px; */
     }
 
     .sec01 {
         width: 100%;
-        height: 588px;
-        padding: 60px 0 60px 0;
-    }
-
-    .visual-slide>img {
-        scale: 0.9;
+        padding: 60px 0;
     }
 
     .sec01-minbox1 {
         padding: 0;
-    }
-
-    .kv-CTA1 img {
-        scale: 0.7;
     }
 
     .sec01-visual {
@@ -1491,20 +1428,6 @@ button {
         background-color: #FFDF70;
         overflow: hidden;
     }
-
-    .visual-swiper {
-        margin-bottom: 40px;
-    }
-
-    .visual-slide {
-        display: flex;
-    }
-
-    .kv-text0 {
-        padding: 60px 40px 20px;
-        line-height: 70px;
-    }
-
     .kv-text1 {
         font-weight: 500;
         font-size: 40px;
@@ -1523,8 +1446,6 @@ button {
     /* --------1024--sec04----- */
     .sec04 {
         padding: 60px 0;
-        height: 670px;
-        margin: 0 auto;
     }
 
     /* ----------1024--sec05 */
@@ -1549,7 +1470,6 @@ button {
         width: 100%;
         max-width: 350px;
         height: 440px;
-        scale: 0.9;
     }
 
     .sec06-box {
@@ -1579,27 +1499,14 @@ button {
         border-radius: 20px;
     }
 
-    /* --------------1024-footer */
-
-    .footer {
-        max-width: 1024px;
-    }
-
-    .footer-wrap {
-        max-width: 1024px;
-    }
-
 }
 
-/* -------------원래-925---------------- */
-@media(max-width:925px) {
+/* -------------원래-768---------------- */
+@media(max-width:768px) {
 
     .container {
-        width: 100%;
-        /* max-width: 768px; */
-        max-width: 925px;
-        margin: 0 auto;
-        padding: 0 60px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .f-title1 {
@@ -1663,12 +1570,12 @@ button {
 
     .sec01 {
         width: 100%;
-        height: 538px;
+        /* height: 538px; */
     }
 
     .sec01-kv {
         margin-top: 0;
-        height: 267px;
+        /* height: 267px; */
         flex-wrap: wrap;
     }
 
@@ -1679,13 +1586,13 @@ button {
     }
 
     .visual-slide>img {
-        scale: 0.8;
-        padding: 0 0 60px 10px;
+        /* padding: 0 0 60px 10px; */
         object-fit: cover;
+        width: clamp(220px, 39.0625vw, 300px);
     }
 
     .kv-text0 {
-        padding: 60px 40px 0px 0;
+        /* padding: 60px 40px 0px 0; */
         line-height: 50px;
     }
 
@@ -1701,10 +1608,11 @@ button {
     }
 
     .kv-CTA1 {
+        flex-direction: column-reverse;
+        gap: 15px;
         font-size: 13px;
-        padding: 20px 20px;
-        height: 131px;
         margin: 0;
+        
     }
 
     .kv-cta {
@@ -1713,7 +1621,8 @@ button {
 
     .des1 {
         font-size: 14px;
-        display: none;
+        /* display: none; */
+        padding-bottom: 0;
     }
 
     /* --------925 sec02 */
@@ -1737,9 +1646,6 @@ button {
 
     /* --------925 sec03 시작하기*/
 
-    .sec03 {
-        height: 1080px;
-    }
 
     .sec03-phone-list {
         gap: 20px;
@@ -1756,17 +1662,16 @@ button {
 
     .sec03-item {
         width: calc((100%-100px) / 6 * 3 + 40px);
-        padding: 40px;
-        height: 390px;
+        /* padding: 40px;
+        height: 390px; */
 
         flex-wrap: nowrap;
         flex-direction: column;
 
     }
 
-    .sec03-item img {
+    .sec03-item > img {
         max-width: 350px;
-        max-height: 150px;
         margin-bottom: 10px;
         object-fit: cover;
 
@@ -1788,12 +1693,6 @@ button {
     }
 
     /* ---------925 sec04 */
-    .sec04 {
-        width: 100%;
-        max-width: 768px;
-        height: 640px;
-    }
-
     .sec04-title {
         line-height: 35px;
         padding-bottom: 20px;
@@ -1827,13 +1726,6 @@ button {
         font-size: 13px;
     }
 
-    /* .swiper-button-next,
-    .swiper-button-prev {
-        scale: 0.4;
-        margin: 150px 270px 270px;
-        display: block;
-    } */
-
     /* -------925--sec05------------- */
     .sec05-min {
         font-size: 14px;
@@ -1844,10 +1736,6 @@ button {
     }
 
     /* -------------925 sec06 */
-    .sec06-img {
-        scale: 0.7;
-
-    }
 
     .select {
         margin: 0;
@@ -1863,19 +1751,15 @@ button {
         /* font-size: 16px; */
     }
 
-
-
     /* -------------풋터 */
+    .footer-wrap {
+        flex-direction: column;
+    }
     .footer-bottom {
         padding: 0 0 40px 0;
     }
-
     .footer-right {
-        display: none
-    }
-
-    .footer-right2 {
-        display: none;
+        width: 100%;
     }
 
 }
@@ -1883,63 +1767,31 @@ button {
 /* ----------원래--480 */
 @media(max-width:580px) {
 
-    .container {
-        width: 100%;
-        max-width: 580px;
-        margin: 0;
-        padding: 0 40px;
-    }
-
     .header-container {
         width: 100%;
         height: 50px;
     }
 
     /* ----------580-------sec01 */
-    .sec01 {
-        width: 100%;
-        max-width: 580px;
-        padding: 0px 0 20px 0;
-        height: 375px;
+
+    .visual-slide{
+        flex-direction: column-reverse;
     }
 
-    .sec01-kv {
-        height: 355px;
-    }
-
-    .sec01-visual {
-        height: 200px;
-    }
-
-    .visual-wrapper {
-        height: 160px;
-
-    }
-
-    .visual-slide img {
-        max-width: 200px;
-        height: 200px;
-        scale: 0.9;
-        padding: 20px 0 20px 10px;
-        object-fit: cover;
+    .sec01-box {
+        flex-direction: column;
     }
 
     .kv-text0 {
-        padding: 60px 20px 0px 0;
         line-height: 30px;
         font-weight: 500;
         font-size: 12px;
+        text-align: center;
     }
 
     .kv-text1 {
         font-size: 24px;
-        /* width: 280px; */
     }
-
-    .swiper-pagination {
-        scale: 0.8;
-    }
-
     .sec01-minbox1 {
         padding: 0 5px 0 0;
     }
@@ -1962,16 +1814,12 @@ button {
     }
 
     .kv-cta {
-        width: 100%;
-        max-width: 90px;
         font-size: 14px;
-        /* padding: 5px 10px; */
     }
 
     /* ----------580--sec02 */
     .sec02 {
         padding: 20px 0;
-        /* height: 500px; */
     }
 
     .sec02-title0 {
@@ -1994,23 +1842,16 @@ button {
     }
 
     /* --------------580 02card----- */
-    .sec02 {
-        height: 555px;
-    }
-
     .sec02-slide {
-        /* line-height: 20px; */
         padding: 20px;
     }
 
     .benefit-card {
         margin-top: 20px;
         padding: 20px;
-        height: 430px;
     }
 
     .benefit-card img {
-        /* scale: 0.7; */
         height: 200px;
         object-fit: cover;
     }
@@ -2051,72 +1892,14 @@ button {
     }
 
     /* -------580---------sec03 */
-    .sec03 {
-        height: 554px;
-        padding: 20px 0;
-    }
-
-    .sec03-title {
-        padding: 0;
-    }
 
     .sec03-item {
         width: 100%;
-        max-width: 440;
-        padding: 20px;
-        height: 174px;
-
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .sec03-item img {
-        max-width: 50%;
-        max-height: 135px;
-        object-fit: cover;
-
-    }
-
-    .sec03-des {
-        text-align: right;
-        width: 40%;
-    }
-
-    .sec03-des img {
-        transform: translateX(15px);
-        scale: 0.8;
-        max-width: 130px;
-        padding: 5px 0 5px 0;
-    }
-
-    .sec03-1160s {
-        font-size: 18px;
-    }
-
-    .font-des1 {
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .sub-title2 {
-        font-size: 18px;
-    }
-
-    .sec03-item:nth-child(3),
-    .sec03-item:nth-child(4) {
-        display: none;
-    }
-
-    .sec03-btn4 {
-        padding: 5px 10px;
-        font-size: 14px;
     }
 
     /* ----- 580--sec04 */
     .sec04 {
         padding: 20px 0;
-        height: 500px;
     }
 
     .sec04-title {
@@ -2131,18 +1914,6 @@ button {
     .sec04-card>img {
         width: 100%;
         height: 50%;
-    }
-
-    .sec04-card-list {
-        height: 440px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sec04-card {
-        padding: 20px;
-        height: 340px;
-        margin: 0;
     }
 
     .name {
@@ -2232,98 +2003,9 @@ button {
     /* --------580--footer----------- */
     .footer {
         font-size: 12px;
-        line-height: 15px;
     }
-
     .footer-bottom>p {
         padding: 0;
     }
-
 }
 
-@media(max-width:520px) {
-
-    .kv-CTA1 {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        line-height: 5px;
-    }
-
-    .kv-CTA1>img {
-        scale: 0.6;
-    }
-
-    .sec01-sub {
-        display: none;
-    }
-
-    /* .sec01-minbox1 {
-        padding: 0;
-    } */
-
-    .kv-cta {
-        width: 100%;
-        max-width: 150px;
-        padding: 5px 10px;
-        margin: 0;
-    }
-
-
-    .sec06-ask {
-        padding: 0 40px;
-        margin: 0 auto;
-    }
-
-}
-
-@media(max-width:462px) {
-
-    /* kv 영역, 특가폰 영역 */
-    .sec01 {
-        max-height: 330px;
-        margin: 0;
-    }
-
-    .sec01-kv {
-        gap: 0;
-    }
-
-    .sec01-visual {
-        height: 100%;
-        max-height: 150px;
-    }
-
-    .visual-slide {
-        height: 150px;
-    }
-
-    .visual-swiper {
-        height: 150px;
-    }
-
-    .visual-swiper img {
-        /* scale: 0.8; */
-        width: 50%;
-        max-width: 200px;
-        height: 155px;
-        padding: 0 0 10px;
-        /* background-size: cover; */
-        /* object-fit: cover; */
-    }
-
-    .kv-text0 {
-        padding: 40px 20px 0px 0;
-        /* line-height: 60px; */
-    }
-
-    .kv-text1 {
-        font-weight: 500;
-        font-size: 18px;
-    }
-
-}
-
-@media(max-width:370) {}
-
-@media(max-width:370) {}
