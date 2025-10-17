@@ -464,7 +464,7 @@ button {
 }
 
 .sec02-num {
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 15px;
     height: 25px;
     line-height: 16px;
@@ -680,16 +680,6 @@ button {
     margin: 0 auto;
 }
 
-/* 
-.sec04-card-wrap {
-    opacity: 0;
-} */
-/* 
-.active2 {
-    opacity: 1;
-    animation-duration: 3s;
-} */
-
 .container4 {
     width: 100%;
     margin: 0 auto;
@@ -760,6 +750,8 @@ button {
 /* ----------------sec04 스왑----------- */
 .sec04-card-list {
     display: flex;
+    padding: 0 0 0px 0;
+    margin-bottom: 120px;
 }
 
 .sec04-card-wrap {
@@ -773,18 +765,19 @@ button {
     margin-right: 30px;
 }
 
-/* .sec04-btn {
-    display: none;
-} */
+/* 
+.sec04-btn { 
+    
+ }  */
 
 
-.swiper-button-next,
-.swiper-button-prev {
-    justify-content: space-between;
-    align-items: center;
-    color: var(--gray-color-sub);
-    transform: translateY(-20px);
+.sec04-dot {
+    margin-bottom: 60px;
+}
 
+.swiper-pagination-bullet-active {
+    background: #ffc800;
+    /* margin-bottom: 100px; */
 }
 
 /* --------------sec05 ask or inquiry------------- */
@@ -887,11 +880,11 @@ button {
 }
 
 .sec06-box {
-
-    width: 580px;
+    width: 100%;
+    max-width: 580px;
 
     text-align: center;
-    line-height: 40px;
+    /* line-height: 40px; */
 
     background-color: var(--white-color);
     border-radius: 20px;
@@ -918,38 +911,58 @@ button {
 }
 
 .sec06-item input {
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
+
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 15px;
     border: 1px solid var(--gray-color-sub);
     margin: 10px 0;
-    line-height: 10px;
 }
 
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
     margin: 0 auto;
+    gap: 40px;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .sec06-kind input,
 .select {
     font-size: 15px;
     border: 1px solid var(--gray-color-sub);
-    padding: 10px 10px;
+    padding: 10px 20px;
     border-radius: 15px;
     color: var(--gray-color1);
-    width: 190px;
+
+    width: 100%;
+    max-width: 190px;
+    /* ----인풋상자 세로높이조절 */
+    height: 40px;
     margin: 10px 0;
 
 }
 
+.select {
+    appearance: none;
+}
+
+.sec06-arrow {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    pointer-events: none;
+}
+
 .sec06 input:focus,
-.sec06 select:focus {
+.sec06 select:focus,
+.sec06-arrow:focus {
     outline: none;
-    border: 2px solid var(--primary-color1);
+    border: 1px solid var(--primary-color1);
 }
 
 .sec06-btn {
@@ -960,7 +973,9 @@ button {
     background-color: var(--primary-color1);
     border: none;
     border-radius: 20px;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
     padding: 20px 20px;
 }
 
@@ -1210,11 +1225,11 @@ button {
     }
 
     .radial02 {
-        width: 300px;
+        width: 250px;
     }
 
     .radial03 {
-        width: 300px;
+        width: 250px;
     }
 
     /* ------------------1160-------sec03---------- */
@@ -1283,7 +1298,6 @@ button {
     }
 
     .sec03-btn4 {
-
         margin: 20px auto 0;
         letter-spacing: 01px;
         padding: 10px 20px;
@@ -1325,15 +1339,6 @@ button {
         margin-top: 3px;
         font-size: 15px;
         color: var(--gray-color1);
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: block;
-        color: var(--gray-color-sub);
-        scale: 0.6;
-        pointer-events: all;
-        margin: 160px 440px 0 440px;
     }
 
     /* ----------1160 sec05------ */
@@ -1386,9 +1391,7 @@ button {
     }
 
     .sec06-box {
-        width: 500px;
         height: 470px;
-        line-height: 40px;
         padding: 40px;
     }
 
@@ -1402,33 +1405,21 @@ button {
 
     .sec06-title {
         line-height: 40px;
-        margin-bottom: 20px;
     }
 
-    .sec06-item input {
-        width: 360px;
-    }
 
     .sec06-kind {
-        width: 360px;
-        margin-left: 30px;
-        gap: 20px;
+        width: 100%;
+        max-width: 420px;
     }
 
     .sec06-kind>input,
     .select {
-        font-size: 15px;
-        border-radius: 15px;
-        width: 160px;
-        margin: 0 0 0 30px;
+        margin: 0;
     }
 
     .sec06-btn {
         font-size: 18px;
-        font-weight: 500;
-
-        width: 360px;
-        padding: 20px 20px;
     }
 
     /* ---------1160 풋터 */
@@ -1496,7 +1487,6 @@ button {
     .sec01-visual {
         width: 100%;
         height: 328px;
-        /* height: 100%; */
         border-radius: 20px;
         background-color: #FFDF70;
         overflow: hidden;
@@ -1534,12 +1524,7 @@ button {
     .sec04 {
         padding: 60px 0;
         height: 670px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        scale: 0.6;
-        margin: 160px 380px 0 380px;
+        margin: 0 auto;
     }
 
     /* ----------1024--sec05 */
@@ -1553,43 +1538,45 @@ button {
     .sec06 {
         width: 100%;
         max-width: 1024px;
-        height: 548px;
         margin: 0 auto;
     }
 
     .sec06-ask {
         margin: 0 auto;
-        max-width: 1024px;
-        padding: 0 90px 0 90px;
-    }
-
-    .sec06-title {
-        line-height: 40px;
     }
 
     .sec06-img {
-        width: 310px;
-        height: 407px;
+        width: 100%;
+        max-width: 350px;
+        height: 440px;
+        scale: 0.9;
     }
 
     .sec06-box {
+        width: 100%;
+        max-width: 450px;
         height: 426px;
-        padding: 20px;
-        line-height: 30px;
+        padding: 40px;
+
     }
 
-    .sec06-item input {
-        width: 340px;
-
+    .sec06-kind input,
+    .select {
+        width: 100%;
+        max-width: 170px;
+        margin: 5px 0 5px 0;
     }
 
     .sec06-kind {
-        width: 340px;
-        margin-left: 60px;
+        width: 100%;
+        max-width: 370px;
+        gap: 20px;
+
     }
 
     .sec06-btn {
-        padding: 20px 20px;
+        padding: 15px 15px;
+        border-radius: 20px;
     }
 
     /* --------------1024-footer */
@@ -1604,12 +1591,13 @@ button {
 
 }
 
-/* --------------768---------------- */
-@media(max-width:768px) {
+/* -------------원래-925---------------- */
+@media(max-width:925px) {
 
     .container {
         width: 100%;
-        max-width: 768px;
+        /* max-width: 768px; */
+        max-width: 925px;
         margin: 0 auto;
         padding: 0 60px;
     }
@@ -1671,7 +1659,7 @@ button {
         display: block;
     }
 
-    /* --------768---sec01 kv */
+    /* --------925---sec01 kv */
 
     .sec01 {
         width: 100%;
@@ -1706,7 +1694,7 @@ button {
         font-size: 30px;
     }
 
-    /* ------768---sec01 cta */
+    /* ------925---sec01 cta */
 
     .sec01-sub {
         font-size: 18px;
@@ -1724,12 +1712,11 @@ button {
     }
 
     .des1 {
+        font-size: 14px;
         display: none;
     }
 
-    /* --------768 sec02 */
-
-
+    /* --------925 sec02 */
 
     .sec02-title0 {
         padding: 0 0 20px 0;
@@ -1748,7 +1735,7 @@ button {
         margin-top: 0px;
     }
 
-    /* --------768 sec03 시작하기*/
+    /* --------925 sec03 시작하기*/
 
     .sec03 {
         height: 1080px;
@@ -1789,7 +1776,6 @@ button {
         width: 100%;
         padding: 0;
         text-align: center;
-
     }
 
     .sec03-des img {
@@ -1798,13 +1784,10 @@ button {
     }
 
     .sec03-btn4 {
-        letter-spacing: 01px;
-        font-size: 16px;
         font-weight: 500;
-        border: 1px solid var(--gray-color-sub);
     }
 
-    /* ---------768 sec04 */
+    /* ---------925 sec04 */
     .sec04 {
         width: 100%;
         max-width: 768px;
@@ -1844,41 +1827,40 @@ button {
         font-size: 13px;
     }
 
-    .swiper-button-next,
+    /* .swiper-button-next,
     .swiper-button-prev {
         scale: 0.4;
         margin: 150px 270px 270px;
         display: block;
-    }
+    } */
 
-    /* -------768--live/ ask------------- */
-    .sec05 {
-        display: none;
-    }
-
-    .sec06-item input {
+    /* -------925--sec05------------- */
+    .sec05-min {
         font-size: 14px;
-
     }
 
+    .sec05-desc {
+        font-size: 14px;
+    }
+
+    /* -------------925 sec06 */
     .sec06-img {
-        display: none;
-    }
+        scale: 0.7;
 
-    .sec06-box {
-        margin-left: 40px;
     }
 
     .select {
         margin: 0;
-        margin-top: 10px;
-        height: 39px;
+        margin-top: 1px;
+        height: 41px;
     }
 
     .sec06-btn {
+        width: 312px;
+        padding: 10px 60px;
+        border-radius: 10px;
         margin-top: 20px;
-        padding: 15px;
-        border-radius: 15px;
+        /* font-size: 16px; */
     }
 
 
@@ -1896,18 +1878,16 @@ button {
         display: none;
     }
 
-    /* -------1024 sec01 sec02카드 다듬기 sec03만들기 밑에서부터 위로 확인하기 */
-    /* sec06 kind 다시 췍 */
-    /* 480 남음 */
 }
 
-@media(max-width:480px) {
+/* ----------원래--480 */
+@media(max-width:580px) {
 
     .container {
         width: 100%;
-        max-width: 480px;
+        max-width: 580px;
         margin: 0;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
     .header-container {
@@ -1915,10 +1895,10 @@ button {
         height: 50px;
     }
 
-    /* ----------480-------sec01 */
+    /* ----------580-------sec01 */
     .sec01 {
         width: 100%;
-        max-width: 480px;
+        max-width: 580px;
         padding: 0px 0 20px 0;
         height: 375px;
     }
@@ -1937,7 +1917,7 @@ button {
     }
 
     .visual-slide img {
-        width: 200px;
+        max-width: 200px;
         height: 200px;
         scale: 0.9;
         padding: 20px 0 20px 10px;
@@ -1945,15 +1925,15 @@ button {
     }
 
     .kv-text0 {
-        padding: 40px 20px 0px 0;
-        line-height: 40px;
+        padding: 60px 20px 0px 0;
+        line-height: 30px;
         font-weight: 500;
         font-size: 12px;
     }
 
     .kv-text1 {
         font-size: 24px;
-        width: 280;
+        /* width: 280px; */
     }
 
     .swiper-pagination {
@@ -1965,7 +1945,7 @@ button {
     }
 
     .sec01-sub {
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         padding: 0 5px;
         font-size: 14px;
     }
@@ -1975,7 +1955,8 @@ button {
     }
 
     .kv-CTA1 img {
-        width: 88px;
+        width: 100%;
+        max-width: 88px;
         height: 84px;
 
     }
@@ -1987,7 +1968,7 @@ button {
         /* padding: 5px 10px; */
     }
 
-    /* ----------480--sec02 */
+    /* ----------580--sec02 */
     .sec02 {
         padding: 20px 0;
         /* height: 500px; */
@@ -2000,6 +1981,7 @@ button {
 
     .sec02-num {
         margin-bottom: 5px;
+        font-size: 14px;
     }
 
     .sec02-des {
@@ -2011,7 +1993,7 @@ button {
         margin-bottom: 20px;
     }
 
-    /* --------------480 02card----- */
+    /* --------------580 02card----- */
     .sec02 {
         height: 555px;
     }
@@ -2042,17 +2024,33 @@ button {
         line-height: 20px;
     }
 
-    /* -------sec02 그라디언트--------- */
+    .sec02-num {
+        font-size: 12px;
+    }
+
+    .sec02-card-title {
+        font-size: 20px;
+    }
+
+    .sec02-des02 {
+        font-size: 14px;
+    }
+
+    .sec02-warn {
+        font-size: 12px;
+    }
+
+    /* -----580--sec02 그라디언트--------- */
 
     .radial02 {
-        width: 150px;
+        width: 120px;
     }
 
     .radial03 {
-        width: 150px;
+        width: 120px;
     }
 
-    /* -------480---------sec03 */
+    /* -------580---------sec03 */
     .sec03 {
         height: 554px;
         padding: 20px 0;
@@ -2111,12 +2109,11 @@ button {
     }
 
     .sec03-btn4 {
-        letter-spacing: 0px;
         padding: 5px 10px;
         font-size: 14px;
     }
 
-    /* ----- 480--sec04 */
+    /* ----- 580--sec04 */
     .sec04 {
         padding: 20px 0;
         height: 500px;
@@ -2137,7 +2134,7 @@ button {
     }
 
     .sec04-card-list {
-        height: 480px;
+        height: 440px;
         padding: 0;
         margin: 0;
     }
@@ -2156,15 +2153,11 @@ button {
         font-size: 14px;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        height: 80px;
-        scale: 0.4;
-        margin: 95px 120px 0 140px;
-        /* margin: 0 auto; */
+    /* ------------------580 sec06 */
+    .sec05 {
+        display: none;
     }
 
-    /* ------------------480 sec06 */
     .sec06 {
         height: 400px;
         padding: 20px 0;
@@ -2185,34 +2178,58 @@ button {
     }
 
     .sec06-box {
-        width: 450px;
+        width: 100%;
+        max-width: 420px;
         margin-left: 20px;
         height: 360px;
-        padding: 20px;
+        padding: 20px 40px;
         line-height: 10px;
     }
 
-    .sec06-item>input {
-        margin: 0;
+    .sec06-ask {
+        margin: 0 auto;
+    }
+
+    .sec06-img {
+        display: none;
+    }
+
+    .sec06-item input {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px 0;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 10px;
     }
 
     .sec06-kind {
         margin: 0 auto;
-        /* margin-left: 20px; */
+        width: 100%;
+        max-width: 300px;
+        display: flex;
     }
 
-    .sec06-ask {
-        padding: 0;
+    .sec06-kind input,
+    .select {
+        width: 100%;
+        max-width: 145px;
+        border-radius: 10px;
+    }
+
+    .selet {
+        margin-bottom: 10px;
     }
 
     .sec06-btn {
-        width: 340px;
+        width: 300px;
         padding: 10px 60px;
         border-radius: 10px;
-        margin-top: 5px;
+        margin-top: 15px;
+        font-size: 16px;
     }
 
-    /* --------480--footer----------- */
+    /* --------580--footer----------- */
     .footer {
         font-size: 12px;
         line-height: 15px;
@@ -2223,3 +2240,90 @@ button {
     }
 
 }
+
+@media(max-width:520px) {
+
+    .kv-CTA1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        line-height: 5px;
+    }
+
+    .kv-CTA1>img {
+        scale: 0.6;
+    }
+
+    .sec01-sub {
+        display: none;
+    }
+
+    /* .sec01-minbox1 {
+        padding: 0;
+    } */
+
+    .kv-cta {
+        width: 100%;
+        max-width: 150px;
+        padding: 5px 10px;
+        margin: 0;
+    }
+
+
+    .sec06-ask {
+        padding: 0 40px;
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width:462px) {
+
+    /* kv 영역, 특가폰 영역 */
+    .sec01 {
+        max-height: 330px;
+        margin: 0;
+    }
+
+    .sec01-kv {
+        gap: 0;
+    }
+
+    .sec01-visual {
+        height: 100%;
+        max-height: 150px;
+    }
+
+    .visual-slide {
+        height: 150px;
+    }
+
+    .visual-swiper {
+        height: 150px;
+    }
+
+    .visual-swiper img {
+        /* scale: 0.8; */
+        width: 50%;
+        max-width: 200px;
+        height: 155px;
+        padding: 0 0 10px;
+        /* background-size: cover; */
+        /* object-fit: cover; */
+    }
+
+    .kv-text0 {
+        padding: 40px 20px 0px 0;
+        /* line-height: 60px; */
+    }
+
+    .kv-text1 {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width:370) {}
+
+@media(max-width:370) {}

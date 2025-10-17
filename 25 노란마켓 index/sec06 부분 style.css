@@ -1,3 +1,188 @@
+@font-face {
+    font-family: 'PyeongtaekAnbo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTAnboR.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard Variable';
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+    src: url('./woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(./woff2/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'), url(./woff2/Pretendard-ExtraBold.woff2) format('woff2'), url(./woff/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(./woff2/Pretendard-Bold.woff2) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url(./woff2/Pretendard-SemiBold.woff2) format('woff2'), url(./woff/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Medium'), url(./woff2/Pretendard-Medium.woff2) format('woff2'), url(./woff/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(./woff2/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url(./woff2/Pretendard-Light.woff2) format('woff2'), url(./woff/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pretendard ExtraLight'), url(./woff2/Pretendard-ExtraLight.woff2) format('woff2'), url(./woff/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-display: swap;
+    src: local('Pretendard Thin'), url(./woff2/Pretendard-Thin.woff2) format('woff2'), url(./woff/Pretendard-Thin.woff) format('woff');
+}
+
+
+/* --------------------commend--------------------- */
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+:root {
+    --primary-color1: #ffc800;
+    --primary-color2: #b4dff2;
+    --sub-color1: #ffefb3;
+    --sub-color2: #e7f4fa;
+    --black-color: #333333;
+    --gray-color1: #717071;
+    --gray-color2: #dadada;
+    --gray-color-sub: #a3a3a3;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: 'Pretendard';
+    color: var(--black-color);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+
+button {
+    background-color: #ffffff;
+}
+
+.margin-b {
+    margin-bottom: 40px;
+}
+
+.margin-r {
+    margin-right: 40px;
+}
+
+.margin-r2 {
+    margin-right: 20px;
+}
+
+/* --------------------------글씨 크기 , 굵기 만들어 놓기 */
+
+.f-title1 {
+    font-size: 45px;
+}
+
+
+.sub-title1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--black-color);
+}
+
+.sub-title2 {
+    font-size: 20px;
+}
+
+.f-sub-t2 {
+    font-size: 18px;
+}
+
+.font-des1 {
+    font-size: 13px;
+}
+
+/* -------------------------font-weight-------------- */
+.fb1 {
+    font-weight: 800;
+}
+
+.fb2 {
+    font-weight: 600;
+}
+
+
+.fl1 {
+    font-weight: 400;
+}
+
 /* ----------------sec06------------------- */
 
 
@@ -19,18 +204,18 @@
     width: 450px;
     height: 560px;
 
-    background-image: url(../image/병아리\ 문의\ 1.png);
+    background-image: url(./asset/image/병아리\ 문의\ 1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .sec06-box {
-
-    width: 580px;
+    width: 100%;
+    max-width: 580px;
 
     text-align: center;
-    line-height: 40px;
+    /* line-height: 40px; */
 
     background-color: var(--white-color);
     border-radius: 20px;
@@ -57,38 +242,59 @@
 }
 
 .sec06-item input {
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
+
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 15px;
     border: 1px solid var(--gray-color-sub);
     margin: 10px 0;
-    line-height: 10px;
+    /* line-height: 10px; */
 }
 
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
     margin: 0 auto;
+    gap: 40px;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .sec06-kind input,
 .select {
     font-size: 15px;
     border: 1px solid var(--gray-color-sub);
-    padding: 10px 10px;
+    padding: 10px 20px;
     border-radius: 15px;
     color: var(--gray-color1);
-    width: 190px;
+
+    width: 100%;
+    max-width: 190px;
+    /* ----인풋상자 세로높이조절 */
+    height: 40px;
     margin: 10px 0;
 
 }
 
+.select {
+    appearance: none;
+}
+
+.sec06-arrow {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    pointer-events: none;
+}
+
 .sec06 input:focus,
-.sec06 select:focus {
+.sec06 select:focus,
+.sec06-arrow:focus {
     outline: none;
-    border: 2px solid var(--primary-color1);
+    border: 1px solid var(--primary-color1);
 }
 
 .sec06-btn {
@@ -99,7 +305,9 @@
     background-color: var(--primary-color1);
     border: none;
     border-radius: 20px;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
     padding: 20px 20px;
 }
 
@@ -109,8 +317,14 @@
 }
 
 @media(max-width:1160px) {
+    .container {
+        width: 100%;
+        max-width: 1160px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 90px;
+    }
 
-    /* -----1160 sec06----- */
     .sec06 {
         width: 100%;
         max-width: 1160px;
@@ -134,9 +348,7 @@
     }
 
     .sec06-box {
-        width: 500px;
         height: 470px;
-        line-height: 40px;
         padding: 40px;
     }
 
@@ -150,145 +362,94 @@
 
     .sec06-title {
         line-height: 40px;
-        margin-bottom: 20px;
     }
 
-    .sec06-item input {
-        width: 360px;
-    }
 
     .sec06-kind {
-        width: 360px;
-        margin-left: 30px;
-        gap: 20px;
+        width: 100%;
+        max-width: 420px;
     }
 
     .sec06-kind>input,
     .select {
-        font-size: 15px;
-        border-radius: 15px;
-        width: 160px;
-        margin: 0 0 0 30px;
+        margin: 0;
     }
 
     .sec06-btn {
         font-size: 18px;
-        font-weight: 500;
-
-        width: 360px;
-        padding: 20px 20px;
     }
-
 }
 
 @media(max-width:1024px) {
 
-    /* -------------1024---ask---- */
+    .container {
+        width: 100%;
+        max-width: 1024px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+
     .sec06 {
         width: 100%;
         max-width: 1024px;
-        height: 548px;
+        /* height: 548px; */
         margin: 0 auto;
     }
 
     .sec06-ask {
         margin: 0 auto;
-        max-width: 1024px;
-        padding: 0 90px 0 90px;
-    }
-
-    .sec06-title {
-        line-height: 40px;
+        /* max-width: 1024px; */
+        /* padding: 0 90px 0 90px; */
     }
 
     .sec06-img {
-        width: 310px;
-        height: 407px;
+        width: 100%;
+        max-width: 350px;
+        height: 440px;
+        scale: 0.9;
     }
 
     .sec06-box {
+        width: 100%;
+        max-width: 450px;
         height: 426px;
-        padding: 20px;
-        line-height: 30px;
+        padding: 40px;
+
     }
 
-    .sec06-item input {
-        width: 340px;
-
+    .sec06-kind input,
+    .select {
+        width: 100%;
+        max-width: 170px;
+        margin: 10px 0 5px 0;
     }
 
     .sec06-kind {
-        width: 340px;
-        margin-left: 60px;
+        width: 100%;
+        max-width: 370px;
+        gap: 20px;
+
     }
 
     .sec06-btn {
-        padding: 20px 20px;
+        padding: 15px 15px;
+        border-radius: 20px;
     }
 }
 
-@media(max-width:768px) {
-
-    .sec06-item input {
-        font-size: 14px;
-
+@media(max-width:925px) {
+    .sec06-box {
+        margin: 0 auto;
     }
 
     .sec06-img {
         display: none;
     }
-
-    .sec06-box {
-        margin-left: 40px;
-    }
 }
 
-@media(max-width:480px) {
-
-    .sec06 {
-        height: 400px;
-        padding: 20px 0;
-    }
-
-    .sec06-title {
-        line-height: 30px;
-        padding: 10px 0 0 0;
-        margin-bottom: 10px;
-    }
-
-    .sec06-title>h4 {
-        font-size: 16px;
-    }
-
-    .sec06-title>h2 {
-        font-size: 18px;
-    }
-
-    .sec06-box {
-        width: 450px;
-        margin-left: 20px;
-        height: 360px;
-        padding: 20px;
-        line-height: 10px;
-    }
-
-    .sec06-item>input {
-        margin: 0;
-    }
-
-    .sec06-kind {
-        margin: 0 auto;
-        /* margin-left: 20px; */
-    }
-
-    .sec06-ask {
-        padding: 0;
-    }
-
-    .sec06-btn {
-        width: 340px;
-        padding: 10px 60px;
-        border-radius: 10px;
-        margin-top: 5px;
-    }
+@media(max-width:768px) {
+    /* 테스트 해보고 적기 */
 }
+
+@media(max-width:480px) {}

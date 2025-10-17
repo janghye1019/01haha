@@ -25,25 +25,19 @@ $(document).ready(function () {
             el: ".swiper-pagination",
         },
         loop: true,
-        autoplay: true
+        // autoplay: true
     });
 
 
     // ------------sec02 슬라이드 효과
 
     let swiper02 = new Swiper(".mySwiper2", {
-        // pagination: {
-        //     el: ".swiper-pagination",
-        // },
+
         slidesPerView: 1.5,
         spaceBetween: 40,
-
+        autoplay: true,
         centeredSlides: true,
         breakpoints: {
-            // 1200: {
-            //     slidesPerView: 3,
-
-            // },
 
             1023: {
                 slidesPerView: 3,
@@ -51,10 +45,17 @@ $(document).ready(function () {
             },
             767: {
                 slidesPerView: 2.3,
-                // spaceBetween: 20,
+
             },
-            319: {
+            560: {
                 slidesPerView: 2
+            },
+            352: {
+                slidesPerView: 1.8,
+
+            },
+            0: {
+                slidesPerView: 1,
             },
 
         },
@@ -102,33 +103,45 @@ $(document).ready(function () {
     //------------sec04 슬라이드 효과
 
     let swiper04 = new Swiper(".mySwiper4", {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+
+        cssMode: true,
+        pagination: {
+            el: ".swiper-pagination",
         },
         slidesPerView: 1,
         spaceBetween: 40,
         direction: 'horizontal',
         loop: true,
-        centeredSlides: true,
+        // centeredSlides: true,
         breakpoints: {
-            1200: {
+            1159: {
                 slidesPerView: 4.4,
 
             },
-
             1023: {
                 slidesPerView: 3.5,
 
             },
-            479: {
-                slidesPerView: 2,
+            760: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            600: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            550: {
+                slidesPerView: 1.7,
+                spaceBetween: 20,
+            },
+            371: {
+                slidesPerView: 1.6,
                 spaceBetween: 20,
             },
             0: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.4,
                 spaceBetween: 20,
-            }
+            },
         },
     });
 
@@ -168,18 +181,39 @@ $(document).ready(function () {
 
         //이하가 아니라 이상일때
         breakpoints: {
-            1161: {
-                slidesPerView: 5,
-                spaceBetween: 20,
+            // 1161: {
+            //     slidesPerView: 5,
+            //     spaceBetween: 20,
+            // },
+            // 1023: {
+            //     slidesPerView: 2.8,
+            //     spaceBetween: 10,
+            // },
+            // 767: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 10,
+            // },
+            1159: {
+                slidesPerView: 4.4,
+
             },
             1023: {
                 slidesPerView: 2.8,
-                spaceBetween: 10,
+
             },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: 10,
+            760: {
+                slidesPerView: 2.4,
+                spaceBetween: 20,
             },
+            // 600: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20,
+            // },
+            // 550: {
+            //     slidesPerView: 1.8,
+            //     spaceBetween: 20,
+            // },
+
         },
     });
 
