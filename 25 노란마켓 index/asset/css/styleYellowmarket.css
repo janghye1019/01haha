@@ -115,6 +115,7 @@ html {
 body {
     font-family: 'Pretendard';
     color: var(--black-color);
+    line-height: 1.3;
 }
 
 a {
@@ -191,7 +192,8 @@ button {
 /* --------------header------------------------ */
 .header {
     width: 100%;
-    height: 100px;
+    height: 100%;
+    max-height: 100px;
     position: relative;
     z-index: 5;
 }
@@ -200,7 +202,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
 .header-container {
@@ -211,13 +212,12 @@ button {
     right: 0;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid var(--gray-color2);
-    padding: 10px 0;
 }
 
 .logo img {
     display: block;
     width: 170px;
-    height: 80px;
+    max-height: 80px;
 }
 
 .hambuger-btn,
@@ -243,7 +243,6 @@ button {
 .sec01 {
     width: 100%;
     padding: 100px 0;
-    /* height: 730px; */
 }
 
 .sec01-kv {
@@ -287,6 +286,7 @@ button {
 .visual-swiper {
     height: 100%;
 }
+
 .visual-slide img {
     width: 50%;
     max-width: 350px;
@@ -310,12 +310,13 @@ button {
     justify-content: space-around;
     align-items: center;
 }
+
 .kv-CTA1:first-child {
     margin-bottom: 20px;
 }
 
 .kv-CTA1 img {
-    width: clamp(90px, 7.1428vw ,100px);
+    width: clamp(80px, 7.1428vw, 100px);
 }
 
 .sec01-minbox1 {
@@ -387,6 +388,7 @@ button {
     margin-top: 60px;
 }
 
+/* ----높이값 없애기 */
 .sec01-box2 img {
     width: 80px;
     height: 85px;
@@ -454,15 +456,12 @@ button {
     padding: 40px;
     background-color: var(--white-color);
     border-radius: 20px;
-
-    /* line-height: 40px; */
 }
 
 .sec02-num {
     font-size: 14px;
     padding: 5px 15px;
     height: 25px;
-    line-height: 16px;
     width: auto;
 
     display: inline-block;
@@ -489,7 +488,6 @@ button {
 .sec02-des02 {
     font-size: 18px;
     font-weight: 400;
-    line-height: 25px;
     margin-bottom: 10px;
     color: var(--gray-color1);
 }
@@ -506,22 +504,22 @@ button {
 .sec02-warn {
     font-size: 13px;
     font-weight: 400;
-    line-height: 20px;
-
     margin-top: 30px;
-    color: var(--gray-color2);
+    color: var(--gray-color1);
 }
 
 .sec02 .swiper-pagination {
     margin: 0 auto;
     width: 100px;
 }
+
 .sec02 .swiper-slide {
     opacity: 0.7;
     transform: scale(0.95);
     transition: .2s all ease-in-out;
-    
+
 }
+
 .sec02 .swiper-slide-active {
     opacity: 1;
     transform: scale(1);
@@ -629,7 +627,7 @@ button {
     box-shadow: inset 0 0 0 2px var(--primary-color1);
 }
 
-.sec03-item > img {
+.sec03-item>img {
     max-width: 265px;
     width: 50%;
 }
@@ -707,12 +705,7 @@ button {
 
 .sec04-card:hover {
     box-shadow: inset 0 0 0 2px var(--primary-color1);
-    /* border: 4px solid var(--primary-color1); */
 }
-
-/* .sec04-card-des {
-    line-height: 25px;
-} */
 
 .sec04-card-des img {
     width: 100px;
@@ -722,16 +715,14 @@ button {
 }
 
 .des04 {
-
-    /* height: 100px; */
     overflow: hidden;
     margin-top: 3px;
     font-size: 15px;
     text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
 }
 
 /* ----------------sec04 스왑----------- */
@@ -746,12 +737,9 @@ button {
 .sec05 {
     width: 100%;
     background-color: #ffde66;
-    /* height: 100px; */
     padding: 20px;
-
     display: flex;
     align-items: center;
-
     position: relative;
     overflow: hidden;
 }
@@ -759,14 +747,13 @@ button {
 .sec05-h2 {
     width: 250px;
     height: 80px;
-
     text-align: center;
     font-size: 24px;
     font-weight: 600;
     background-color: #ffde66;
 
     position: absolute;
-    top: 35px;
+    top: 20px;
     left: 0px;
     z-index: 3;
 }
@@ -814,8 +801,6 @@ button {
 }
 
 /* ----------------sec06------------------- */
-
-
 .sec06 {
     background-color: var(--sub-color1);
 }
@@ -823,17 +808,14 @@ button {
 .sec06-ask {
     max-width: 1400px;
     margin: 0 auto;
-
     padding: 100px 70px;
-
     display: flex;
     justify-content: space-between;
 }
 
 .sec06-img {
-    width: 450px;
-    height: 560px;
-
+    width: 100%;
+    width: clamp(300px, 32.1428vw, 450px);
     background-image: url(../image/병아리\ 문의\ 1.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -843,10 +825,7 @@ button {
 .sec06-box {
     width: 100%;
     max-width: 580px;
-
     text-align: center;
-    /* line-height: 40px; */
-
     background-color: var(--white-color);
     border-radius: 20px;
     padding: 80px;
@@ -861,7 +840,7 @@ button {
 }
 
 .sec06-title {
-    line-height: 50px;
+    line-height: 1.3;
     margin-bottom: 20px;
 }
 
@@ -873,7 +852,7 @@ button {
 
 .sec06-item input {
     width: 100%;
-    max-width: 420px;
+    min-width: 250px;
 
     padding: 10px 10px;
     font-size: 16px;
@@ -902,10 +881,7 @@ button {
 
     width: 100%;
     max-width: 190px;
-    /* ----인풋상자 세로높이조절 */
-    height: 40px;
     margin: 10px 0;
-
 }
 
 .select {
@@ -920,8 +896,7 @@ button {
 }
 
 .sec06 input:focus,
-.sec06 select:focus,
-.sec06-arrow:focus {
+.sec06 select:focus {
     outline: none;
     border: 1px solid var(--primary-color1);
 }
@@ -935,7 +910,7 @@ button {
     border: none;
     border-radius: 20px;
     width: 100%;
-    max-width: 420px;
+    min-width: 310px;
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -949,29 +924,19 @@ button {
 
 .footer {
     width: 100%;
-    /* height: 302px; */
     background-color: var(--white-color);
     padding: 60px 0 0 0;
 }
 
 .footer-wrap {
-    /* margin: 0 auto;
-    width: 100%;
-    max-width: 1400px; */
-
     display: flex;
     justify-content: space-between;
 }
 
 .footer-bottom {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
-
 }
 
 .footer-bottom>p {
@@ -983,7 +948,7 @@ button {
 }
 
 .footer-left {
-    line-height: 30px;
+    line-height: 1.5;
     margin-bottom: 40px;
 }
 
@@ -1040,17 +1005,8 @@ button {
         max-width: 1160px;
         box-sizing: border-box;
         margin: 0 auto;
-        /* padding: 0 90px; */
+
     }
-
-    /* .header,
-    .container {
-        height: 80px;
-    } */
-
-    /* .header {
-        height: 80px;
-    } */
 
     .header-nav {
         font-size: 18px;
@@ -1060,45 +1016,30 @@ button {
     /* -----1160--sec01 kv------------ */
     .sec01 {
         width: 100%;
-        /* height: 640px; */
+        padding: 80px 0;
     }
 
     .sec01-kv {
         display: flex;
         flex-wrap: wrap;
-        /* max-height: 328px; */
         gap: 20px;
-
     }
 
     .sec01-visual {
         width: 100%;
-        height: 100%;
         border-radius: 20px;
         background-color: #FFDF70;
         overflow: hidden;
     }
 
-    .visual-wrapper {
-        /* height: 328px; */
-        /* margin-bottom: 40px; */
-    }
-
     .visual-swiper img {
         width: 50%;
-        /* height: 100%; */
         padding: 0 0 10px;
         object-fit: cover;
     }
 
     .visual-slide {
         display: flex;
-    }
-
-
-    .kv-text0 {
-        /* padding: 60px 40px 20px; */
-        line-height: 70px;
     }
 
     .kv-text1 {
@@ -1118,13 +1059,12 @@ button {
         flex: 1;
         min-width: 0;
         border-radius: 20px;
-        /* padding: 20px 40px; */
         border: 1px solid var(--gray-color2);
         background-color: var(--white-color);
         display: flex;
         height: auto;
-        /* justify-content: space-evenly; */
     }
+
     .kv-CTA1:first-child {
         margin-bottom: 0;
     }
@@ -1146,7 +1086,7 @@ button {
     /* -----------1160----sec02----------- */
     .sec02 {
         width: 100%;
-        padding: 60px 0;
+        padding: 80px 0;
         margin: 0 auto;
     }
 
@@ -1166,10 +1106,7 @@ button {
     /* --------sec02 카드--------- */
 
     .benefit-card {
-        /* width: 100%;
-        max-height: 530px; */
         padding: 30px;
-        /* border-radius: 20px; */
     }
 
     .benefit-card>img {
@@ -1196,13 +1133,12 @@ button {
         width: 250px;
     }
 
-    /* ------------------1160-------sec03---------- */
+    /* ---------1160-------sec03---------- */
 
     .sec03 {
-        padding: 60px 0;
+        padding: 80px 0;
         margin: 0 auto;
         width: 100%;
-
     }
 
     .sec03-title {
@@ -1229,12 +1165,11 @@ button {
 
     .sec03-item {
         width: calc((100% - 140px) / 8 * 4 + 60px);
-        /* height: 213px; */
         padding: 25px;
         gap: 10px;
     }
 
-    .sec03-item > img {
+    .sec03-item>img {
         max-width: 190px;
         width: clamp(150px, 18.5546vw, 190px);
     }
@@ -1242,11 +1177,6 @@ button {
     .sec03-1160s {
         font-size: 20px;
     }
-
-    /* .sec03-des {
-        padding: 0 0 0 40px;
-        text-align: right;
-    } */
 
     .sec03-des img {
         max-width: 120px;
@@ -1284,8 +1214,6 @@ button {
 
     .sec04-card>img {
         width: 100%;
-        /* max-width: 260px; */
-        /* height: 50%; */
         padding: 0;
     }
 
@@ -1294,7 +1222,6 @@ button {
     }
 
     .des04 {
-        /* height: 80px; */
         overflow: hidden;
         margin-top: 3px;
         font-size: 15px;
@@ -1305,14 +1232,12 @@ button {
     .sec05 {
         width: 100%;
         max-width: 1160px;
-        height: 80px;
     }
 
     .sec05-h2 {
         font-size: 20px;
         width: 200px;
-        height: 80px;
-        padding: 30px;
+        padding: 25px;
         top: 0px;
         left: 0px;
     }
@@ -1331,7 +1256,7 @@ button {
     .sec06 {
         width: 100%;
         max-width: 1160px;
-        padding: 60px 0;
+        padding: 80px 0;
     }
 
     .sec06-ask {
@@ -1340,9 +1265,6 @@ button {
     }
 
     .sec06-img {
-
-        width: 400px;
-        height: 500px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1350,7 +1272,6 @@ button {
     }
 
     .sec06-box {
-        height: 470px;
         padding: 40px;
     }
 
@@ -1361,11 +1282,6 @@ button {
     .sec06-box h4 {
         font-size: 20px;
     }
-
-    .sec06-title {
-        line-height: 40px;
-    }
-
 
     .sec06-kind {
         width: 100%;
@@ -1385,7 +1301,6 @@ button {
     .footer {
         width: 100%;
         max-width: 1160px;
-        /* height: 302px; */
         padding: 40px 0;
         font-size: 13px;
     }
@@ -1409,7 +1324,6 @@ button {
         max-width: 1024px;
         box-sizing: border-box;
         margin: 0 auto;
-        /* padding: 0 60px; */
     }
 
     .sec01 {
@@ -1422,12 +1336,11 @@ button {
     }
 
     .sec01-visual {
-        width: 100%;
-        height: 328px;
         border-radius: 20px;
         background-color: #FFDF70;
         overflow: hidden;
     }
+
     .kv-text1 {
         font-weight: 500;
         font-size: 40px;
@@ -1448,36 +1361,15 @@ button {
         padding: 60px 0;
     }
 
-    /* ----------1024--sec05 */
-
-    .sec05 {
-        width: 100%;
-        max-width: 1024px;
-    }
-
     /* -------------1024---ask---- */
-    .sec06 {
-        width: 100%;
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-
     .sec06-ask {
         margin: 0 auto;
-    }
-
-    .sec06-img {
-        width: 100%;
-        max-width: 350px;
-        height: 440px;
     }
 
     .sec06-box {
         width: 100%;
         max-width: 450px;
-        height: 426px;
         padding: 40px;
-
     }
 
     .sec06-kind input,
@@ -1501,7 +1393,7 @@ button {
 
 }
 
-/* -------------원래-768---------------- */
+/* ------------768-------------- */
 @media(max-width:768px) {
 
     .container {
@@ -1539,23 +1431,20 @@ button {
         position: absolute;
         top: 50px;
         left: 0;
-
         width: 100%;
-        padding: 0 70px;
 
+        padding: 0 20px;
         font-size: 16px;
-        text-align: right;
-
+        text-align: left;
         display: none;
-
     }
 
     .header-nav.on {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column-reverse;
+        align-items: flex-start;
         padding: 20px 60px;
         background-color: var(--sub-color1);
-
     }
 
     .hambuger-btn.hide {
@@ -1566,34 +1455,24 @@ button {
         display: block;
     }
 
-    /* --------925---sec01 kv */
-
+    /* --------768---sec01 kv */
     .sec01 {
-        width: 100%;
-        /* height: 538px; */
+        padding: 60px 0;
     }
 
     .sec01-kv {
         margin-top: 0;
-        /* height: 267px; */
         flex-wrap: wrap;
     }
 
     .sec01-visual {
-        height: 100%;
         width: 100%;
         box-sizing: border-box;
     }
 
     .visual-slide>img {
-        /* padding: 0 0 60px 10px; */
         object-fit: cover;
         width: clamp(220px, 39.0625vw, 300px);
-    }
-
-    .kv-text0 {
-        /* padding: 60px 40px 0px 0; */
-        line-height: 50px;
     }
 
     .kv-text1 {
@@ -1601,7 +1480,7 @@ button {
         font-size: 30px;
     }
 
-    /* ------925---sec01 cta */
+    /* ------768---sec01 cta */
 
     .sec01-sub {
         font-size: 18px;
@@ -1612,7 +1491,6 @@ button {
         gap: 15px;
         font-size: 13px;
         margin: 0;
-        
     }
 
     .kv-cta {
@@ -1621,11 +1499,10 @@ button {
 
     .des1 {
         font-size: 14px;
-        /* display: none; */
         padding-bottom: 0;
     }
 
-    /* --------925 sec02 */
+    /* --------768 sec02 */
 
     .sec02-title0 {
         padding: 0 0 20px 0;
@@ -1640,13 +1517,7 @@ button {
         margin-bottom: 20px;
     }
 
-    .sec02-warn {
-        margin-top: 0px;
-    }
-
-    /* --------925 sec03 시작하기*/
-
-
+    /* --------768 sec03 시작하기*/
     .sec03-phone-list {
         gap: 20px;
     }
@@ -1662,16 +1533,11 @@ button {
 
     .sec03-item {
         width: calc((100%-100px) / 6 * 3 + 40px);
-        /* padding: 40px;
-        height: 390px; */
-
         flex-wrap: nowrap;
         flex-direction: column;
-
     }
 
-    .sec03-item > img {
-        max-width: 350px;
+    .sec03-item>img {
         margin-bottom: 10px;
         object-fit: cover;
 
@@ -1692,9 +1558,8 @@ button {
         font-weight: 500;
     }
 
-    /* ---------925 sec04 */
+    /* ---------768 sec04 */
     .sec04-title {
-        line-height: 35px;
         padding-bottom: 20px;
     }
 
@@ -1721,12 +1586,10 @@ button {
     }
 
     .des04 {
-        line-height: 20px;
-        height: 80px;
         font-size: 13px;
     }
 
-    /* -------925--sec05------------- */
+    /* -------768--sec05------------- */
     .sec05-min {
         font-size: 14px;
     }
@@ -1735,29 +1598,24 @@ button {
         font-size: 14px;
     }
 
-    /* -------------925 sec06 */
-
-    .select {
-        margin: 0;
-        margin-top: 1px;
-        height: 41px;
-    }
+    /* -------------768 sec06 */
 
     .sec06-btn {
-        width: 312px;
+        /* width: 312px; */
         padding: 10px 60px;
         border-radius: 10px;
         margin-top: 20px;
-        /* font-size: 16px; */
     }
 
     /* -------------풋터 */
     .footer-wrap {
         flex-direction: column;
     }
+
     .footer-bottom {
         padding: 0 0 40px 0;
     }
+
     .footer-right {
         width: 100%;
     }
@@ -1773,8 +1631,11 @@ button {
     }
 
     /* ----------580-------sec01 */
+    .sec01 {
+        padding: 20px 0;
+    }
 
-    .visual-slide{
+    .visual-slide {
         flex-direction: column-reverse;
     }
 
@@ -1783,7 +1644,6 @@ button {
     }
 
     .kv-text0 {
-        line-height: 30px;
         font-weight: 500;
         font-size: 12px;
         text-align: center;
@@ -1792,6 +1652,7 @@ button {
     .kv-text1 {
         font-size: 24px;
     }
+
     .sec01-minbox1 {
         padding: 0 5px 0 0;
     }
@@ -1800,17 +1661,6 @@ button {
         letter-spacing: 3px;
         padding: 0 5px;
         font-size: 14px;
-    }
-
-    .kv-CTA1 {
-        padding: 5px auto;
-    }
-
-    .kv-CTA1 img {
-        width: 100%;
-        max-width: 88px;
-        height: 84px;
-
     }
 
     .kv-cta {
@@ -1824,7 +1674,6 @@ button {
 
     .sec02-title0 {
         padding: 0;
-        line-height: 10px;
     }
 
     .sec02-num {
@@ -1858,11 +1707,6 @@ button {
 
     .sec02-title {
         font-size: 18px;
-        line-height: 30px;
-    }
-
-    .sec02-des02 {
-        line-height: 20px;
     }
 
     .sec02-num {
@@ -1902,18 +1746,9 @@ button {
         padding: 20px 0;
     }
 
-    .sec04-title {
-        line-height: 24px;
-    }
-
     .sec04-T {
         font-size: 18px;
         padding: 0;
-    }
-
-    .sec04-card>img {
-        width: 100%;
-        height: 50%;
     }
 
     .name {
@@ -1930,12 +1765,10 @@ button {
     }
 
     .sec06 {
-        height: 400px;
         padding: 20px 0;
     }
 
     .sec06-title {
-        line-height: 30px;
         padding: 10px 0 0 0;
         margin-bottom: 10px;
     }
@@ -1951,10 +1784,6 @@ button {
     .sec06-box {
         width: 100%;
         max-width: 420px;
-        margin-left: 20px;
-        height: 360px;
-        padding: 20px 40px;
-        line-height: 10px;
     }
 
     .sec06-ask {
@@ -2004,8 +1833,12 @@ button {
     .footer {
         font-size: 12px;
     }
+
     .footer-bottom>p {
         padding: 0;
     }
-}
 
+    .footer-right2 {
+        display: none;
+    }
+}

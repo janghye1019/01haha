@@ -38,7 +38,7 @@ $(document).ready(function () {
         // autoplay: true,
         centeredSlides: true,
         loop: true,
-    loopedSlides: 2,
+        loopedSlides: 2,
         breakpoints: {
 
             1023: {
@@ -178,19 +178,7 @@ $(document).ready(function () {
 
         //이하가 아니라 이상일때
         breakpoints: {
-            // 1161: {
-            //     slidesPerView: 5,
-            //     spaceBetween: 20,
-            // },
-            // 1023: {
-            //     slidesPerView: 2.8,
-            //     spaceBetween: 10,
-            // },
-            // 767: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 10,
-            // },
-            1159: {
+            1161: {
                 slidesPerView: 4.4,
 
             },
@@ -198,19 +186,13 @@ $(document).ready(function () {
                 slidesPerView: 2.8,
 
             },
-            760: {
+            750: {
                 slidesPerView: 2.4,
                 spaceBetween: 20,
             },
-            // 600: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20,
-            // },
-            // 550: {
-            //     slidesPerView: 1.8,
-            //     spaceBetween: 20,
-            // },
-
+            300: {
+                slidesPerView: 1.4,
+            },
         },
     });
 
