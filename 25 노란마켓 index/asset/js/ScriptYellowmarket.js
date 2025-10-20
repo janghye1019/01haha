@@ -105,8 +105,8 @@ $(document).ready(function () {
 
     // ------------sec03 580일때 스와이퍼 클래스 추가
 
-    let swiper03 = new Swiper(".mySwiper3", {
-        slidesPerView: 2,
+        let swiper03 = new Swiper(".mySwiper3", {
+        slidesPerView: 1,
         grid: {
             rows: 2,
         },
@@ -115,15 +115,15 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
-        // breakpoints: {
-        //     1024: {
-        //         slidesPerView: 2,
-        //         spaceBetween: 30,
-        //         grid: {
-        //             rows: 2,
-        //         },
-        //     },
-        // },
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2,
+                },
+            },
+        },
     });
     //------------sec04 슬라이드 효과
 

@@ -550,8 +550,22 @@ button {
 /* .sec03 {
 } */
 .tab-contants {
-    opacity: 0;
+    /* opacity: 0; */
+    /* height: 100%; */
 }
+
+.sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
+    flex-direction: unset;
+}
+@media(min-width: 1023px) {
+    .sec03-phone-list .swiper-slide:nth-of-type(2) {
+        margin-top: 0 !important;
+    }
+    .sec03-phone-list .swiper-slide:nth-of-type(3) {
+        margin-top: 30px !important;
+    }
+}
+
 
 .active {
     opacity: 1;
@@ -596,19 +610,13 @@ button {
 }
 
 .sec03-phone-list {
-    width: calc((100% - 440px) / 12 * 6 + 200px);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-
-    animation: fadeIn;
-    animation-duration: 1s;
+    /* animation: fadeIn;
+    animation-duration: 1s; */
 }
 
 .sec03-item {
-    /* border: 1px solid var(--gray-color2); */
-    height: calc((100% - 30px) / 2) !important;
+    border: 1px solid var(--gray-color2);
+    /* height: calc((100% - 30px) / 2) !important; */
     box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     padding: 40px;
@@ -1146,20 +1154,20 @@ button {
         padding: 20px 0 20px 0;
     }
 
-    .sec03-phone-list {
+    /* .sec03-phone-list {
         gap: 20px;
-    }
+    } */
 
-    .sec03-item {
+    /* .sec03-item {
         width: calc((100% - 140px) / 8 * 4 + 60px);
         padding: 25px;
         gap: 10px;
-    }
+    } */
 
-    .sec03-item>img {
+    /* .sec03-item>img {
         max-width: 190px;
         width: clamp(150px, 18.5546vw, 190px);
-    }
+    } */
 
     .sec03-1160s {
         font-size: 20px;
@@ -1481,9 +1489,9 @@ button {
     }
 
     /* --------768 sec03 시작하기*/
-    .sec03-phone-list {
+    /* .sec03-phone-list {
         gap: 20px;
-    }
+    } */
 
     .sec03-tab {
         gap: 40px;
@@ -1494,11 +1502,11 @@ button {
         padding: 5px 15px;
     }
 
-    .sec03-item {
+    /* .sec03-item {
         width: calc((100%-100px) / 6 * 3 + 40px);
         flex-wrap: nowrap;
         flex-direction: column;
-    }
+    } */
 
     .sec03-item>img {
         margin-bottom: 10px;

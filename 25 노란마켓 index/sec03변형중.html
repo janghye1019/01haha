@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sec03 변형용</title>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
@@ -20,124 +20,128 @@
     <!-- <link rel="stylesheet" href="./asset/css/styleYellowmarket.css"> -->
 
     <style>
-        html,
-        body {
-            /* position: relative; */
-            height: 100%;
-        }
+    html,
+    body {
+      position: relative;
+      /* height: 100%; */
+    }
 
-        /* body {
-            background: #000;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        } */
+    body {
+      background: #000;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-        .swiper {
-            width: 100%;
-            height: 100%;
-            /* margin-left: auto;
-            margin-right: auto; */
-        }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+.swiper-grid-column>.swiper-wrapper {
+    flex-direction: unset;
+}
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #333;
+      height: calc((100% - 30px) / 2) !important;
 
-        .swiper-slide {
-            /* text-align: center;
-            font-size: 18px; */
-            /* background: #333; */
-            height: calc((100% - 30px) / 2) !important;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
+      /* Center slide text vertically */
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
 
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Swiper -->
-    <div class="swiper mySwiper3 sec03-wrap01 sec03-wrap">
-        <div class="swiper-wrapper sec03-phone-list
-                            animate__animated animate__fadeIn">
-
-            <div class="swiper-slide ">
-                <div class="sec03-item">
-                    <img src="./asset/image/최신1.png" alt="최신폰1">
-
-                    <div class="sec03-des">
-                        <p class="sub-title1 sec03-1160s">아이폰16 PRO</p>
-                        <img src="./asset/image/최신1 색상.png" alt="색상바">
-                        <p class="sec03-dec-in">
-                            <span style="color: red;" class="fb2 sub-title2">40%</span> <del
-                                class=" font-des1 fl1">2,000,000,</del>
-                        </p>
-
-                        <p class="sub-title2 fb2">1,205,000원</p>
-                        <p class="font-des1 fb2">5G/LTE 사용가능</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="sec03-item">
-                    <img src="./asset/image/최신3.png" alt="최신폰3">
-                    <div class="sec03-des">
-                        <p class="sub-title1 sec03-1160s">갤럭시S24 Plus</p>
-                        <img src="./asset/image/최신3 색상.png" alt="색상바">
-                        <p class="sec03-dec-in">
-                            <span style="color: red;" class="fb2 sub-title2">52%</span> <del
-                                class=" font-des1 fl1">1,496,000,</del>
-                        </p>
-
-                        <p class="sub-title2 fb2">715,000원</p>
-                        <p class="font-des1 fb2">5G/LTE 사용가능</p>
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="swiper-slide ">
-                <div class="sec03-item">
-                    <img src="./asset/image/최신2.png" alt="최신폰2">
-
-                    <div class="sec03-des">
-                        <p class="sub-title1 sec03-1160s">아이폰16 Plus</p>
-                        <img src="./asset/image/최신2 색상.png" alt="색상바">
-                        <p class="sec03-dec-in">
-                            <span style="color: red;" class="fb2 sub-title2">27%</span> <del
-                                class=" font-des1 fl1">1,400,000,</del>
-                        </p>
-
-                        <p class="sub-title2 fb2">1,025,000원</p>
-                        <p class="font-des1 fb2">5G/LTE 사용가능</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="sec03-item">
-                    <img src="./asset/image/인기-4.png" alt="폰이미지4">
-
-                    <div class="sec03-des">
-                        <p class="sub-title1 sec03-1160s">갤럭시S25 엣지</p>
-                        <img src="./asset/image/최신4 색상.png" alt="색상바">
-                        <p class="sec03-dec-in">
-                            <span style="color: red;" class="fb2 sub-title2">37%</span> <del
-                                class=" font-des1 fl1">1,639,000,</del>
-                        </p>
-
-                        <p class="sub-title2 fb2">1,029,000원</p>
-                        <p class="font-des1 fb2">정품 배터리 무료 교체</p>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
+     <div class="tab-contants">
+         <div class="swiper mySwiper3 sec03-wrap01 sec03-wrap">
+             <div class="swiper-wrapper sec03-phone-list">
+                 <div class="swiper-slide ">
+                     <div class="sec03-item">
+                         <img src="./asset/image/최신1.png" alt="최신폰1">
+     
+                         <div class="sec03-des">
+                             <p class="sub-title1 sec03-1160s">아이폰16 PRO</p>
+                             <img src="./asset/image/최신1 색상.png" alt="색상바">
+                             <p class="sec03-dec-in">
+                                 <span style="color: red;" class="fb2 sub-title2">40%</span> <del
+                                     class=" font-des1 fl1">2,000,000,</del>
+                             </p>
+     
+                             <p class="sub-title2 fb2">1,205,000원</p>
+                             <p class="font-des1 fb2">5G/LTE 사용가능</p>
+     
+                         </div>
+                     </div>
+                 </div>
+                 <div class="swiper-slide">
+                     <div class="sec03-item">
+                         <img src="./asset/image/최신3.png" alt="최신폰3">
+                         <div class="sec03-des">
+                             <p class="sub-title1 sec03-1160s">갤럭시S24 Plus</p>
+                             <img src="./asset/image/최신3 색상.png" alt="색상바">
+                             <p class="sec03-dec-in">
+                                 <span style="color: red;" class="fb2 sub-title2">52%</span> <del
+                                     class=" font-des1 fl1">1,496,000,</del>
+                             </p>
+     
+                             <p class="sub-title2 fb2">715,000원</p>
+                             <p class="font-des1 fb2">5G/LTE 사용가능</p>
+     
+                         </div>
+     
+                     </div>
+                 </div>
+                 <div class="swiper-slide ">
+                     <div class="sec03-item">
+                         <img src="./asset/image/최신2.png" alt="최신폰2">
+     
+                         <div class="sec03-des">
+                             <p class="sub-title1 sec03-1160s">아이폰16 Plus</p>
+                             <img src="./asset/image/최신2 색상.png" alt="색상바">
+                             <p class="sec03-dec-in">
+                                 <span style="color: red;" class="fb2 sub-title2">27%</span> <del
+                                     class=" font-des1 fl1">1,400,000,</del>
+                             </p>
+     
+                             <p class="sub-title2 fb2">1,025,000원</p>
+                             <p class="font-des1 fb2">5G/LTE 사용가능</p>
+     
+                         </div>
+                     </div>
+                 </div>
+                 <div class="swiper-slide">
+                     <div class="sec03-item">
+                         <img src="./asset/image/인기-4.png" alt="폰이미지4">
+     
+                         <div class="sec03-des">
+                             <p class="sub-title1 sec03-1160s">갤럭시S25 엣지</p>
+                             <img src="./asset/image/최신4 색상.png" alt="색상바">
+                             <p class="sec03-dec-in">
+                                 <span style="color: red;" class="fb2 sub-title2">37%</span> <del
+                                     class=" font-des1 fl1">1,639,000,</del>
+                             </p>
+     
+                             <p class="sub-title2 fb2">1,029,000원</p>
+                             <p class="font-des1 fb2">정품 배터리 무료 교체</p>
+     
+                         </div>
+                     </div>
+                 </div>
+     
+             </div>
+             <div class="swiper-pagination"></div>
+         </div>
+     </div>
 
 
 
@@ -152,26 +156,17 @@
     <!-- <script src="./asset/js/ScriptYellowmarket.js"></script> -->
 
     <script>
-        let swiper = new Swiper(".mySwiper3", {
-            slidesPerView: 1,
-            grid: {
-                rows: 2,
-            },
-            spaceBetween: 10,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    grid: {
-                        rows: 2,
-                    },
-                },
-            },
-        });
+        var swiper = new Swiper(".mySwiper3", {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
     </script>
 
 </body>
