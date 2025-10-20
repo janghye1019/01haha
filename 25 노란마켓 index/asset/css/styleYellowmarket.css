@@ -241,6 +241,9 @@ button {
 
 .header-nav>li:hover {
     color: var(--primary-color1);
+    transform: scale(1.1);
+    transition: 0.2s all ease-in-out;
+
 
 }
 
@@ -1380,21 +1383,21 @@ button {
         box-sizing: border-box;
         position: absolute;
         top: 50px;
-        left: 0;
+        right: 0;
         width: 100%;
 
-        padding: 0 20px;
+        padding: 0 auto;
         font-size: 16px;
-        text-align: left;
         display: none;
     }
 
     .header-nav.on {
         display: flex;
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: center;
         padding: 20px 60px;
-        background-color: #ffefb3c4;
+        background: linear-gradient(0deg, #fffffff1, #fff1bc);
+        ;
     }
 
     .hambuger-btn.hide {
