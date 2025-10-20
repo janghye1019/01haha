@@ -320,7 +320,6 @@ button {
 }
 
 .sec01-minbox1 {
-
     align-content: center;
     /* 두 요소 센터 정렬로 맞추는 방법 */
     /* h3랑 일반텍스트의 중심선이 달라서 안돼용 */
@@ -597,6 +596,7 @@ button {
 }
 
 .sec03-phone-list {
+    width: calc((100% - 440px) / 12 * 6 + 200px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -607,8 +607,8 @@ button {
 }
 
 .sec03-item {
-    width: calc((100% - 440px) / 12 * 6 + 200px);
     /* border: 1px solid var(--gray-color2); */
+    height: calc((100% - 30px) / 2) !important;
     box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     padding: 40px;
@@ -725,13 +725,6 @@ button {
     -webkit-line-clamp: 4;
 }
 
-/* ----------------sec04 스왑----------- */
-
-/* .mySwiper4 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: -20px;
-} */
-
-
 /* --------------sec05 ask or inquiry------------- */
 
 .sec05 {
@@ -801,21 +794,21 @@ button {
 }
 
 /* ----------------sec06------------------- */
+
 .sec06 {
     background-color: var(--sub-color1);
+    padding: 100px 40px;
 }
 
 .sec06-ask {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .sec06-img {
-    width: 100%;
-    width: clamp(300px, 32.1428vw, 450px);
+    width: clamp(150px, 31.4285vw, 440px);
     background-image: url(../image/병아리\ 문의\ 1.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -823,8 +816,7 @@ button {
 }
 
 .sec06-box {
-    width: 100%;
-    max-width: 580px;
+    width: clamp(330px, 41.4285vw, 580px);
     text-align: center;
     background-color: var(--white-color);
     border-radius: 20px;
@@ -851,9 +843,7 @@ button {
 }
 
 .sec06-item input {
-    width: 100%;
-    min-width: 250px;
-
+    width: clamp(240px, 28.5714vw, 400px);
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 15px;
@@ -864,9 +854,9 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
+    width: clamp(240px, 28.5714vw, 400px);
     margin: 0 auto;
-    gap: 40px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
 }
@@ -876,11 +866,9 @@ button {
     font-size: 15px;
     border: 1px solid var(--gray-color-sub);
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     color: var(--gray-color1);
-
-    width: 100%;
-    max-width: 190px;
+    width: clamp(115px, 13.5714vw, 190px);
     margin: 10px 0;
 }
 
@@ -909,8 +897,7 @@ button {
     background-color: var(--primary-color1);
     border: none;
     border-radius: 20px;
-    width: 100%;
-    min-width: 310px;
+    width: clamp(240px, 28.5714vw, 400px);
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -1202,7 +1189,7 @@ button {
     .sec04 {
         width: 100%;
         box-sizing: border-box;
-        padding: 60px 0;
+        padding: 80px 0;
 
         overflow: hidden;
     }
@@ -1254,21 +1241,11 @@ button {
 
     /* -----1160 sec06----- */
     .sec06 {
-        width: 100%;
-        max-width: 1160px;
         padding: 80px 0;
     }
 
     .sec06-ask {
         margin: 0 auto;
-        padding: 0 90px 0px 90px;
-    }
-
-    .sec06-img {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        object-fit: cover;
     }
 
     .sec06-box {
@@ -1281,11 +1258,6 @@ button {
 
     .sec06-box h4 {
         font-size: 20px;
-    }
-
-    .sec06-kind {
-        width: 100%;
-        max-width: 420px;
     }
 
     .sec06-kind>input,
@@ -1362,34 +1334,25 @@ button {
     }
 
     /* -------------1024---ask---- */
+    .sec06 {
+        padding: 60px 0;
+    }
+
     .sec06-ask {
         margin: 0 auto;
     }
 
     .sec06-box {
         width: 100%;
-        max-width: 450px;
+        max-width: 400px;
         padding: 40px;
-    }
-
-    .sec06-kind input,
-    .select {
-        width: 100%;
-        max-width: 170px;
-        margin: 5px 0 5px 0;
-    }
-
-    .sec06-kind {
-        width: 100%;
-        max-width: 370px;
-        gap: 20px;
-
     }
 
     .sec06-btn {
         padding: 15px 15px;
-        border-radius: 20px;
+        border-radius: 15px;
     }
+
 
 }
 
@@ -1590,21 +1553,19 @@ button {
     }
 
     /* -------768--sec05------------- */
-    .sec05-min {
-        font-size: 14px;
-    }
-
-    .sec05-desc {
-        font-size: 14px;
+    .sec05 {
+        display: none;
     }
 
     /* -------------768 sec06 */
 
-    .sec06-btn {
-        /* width: 312px; */
-        padding: 10px 60px;
-        border-radius: 10px;
-        margin-top: 20px;
+    .sec06 {
+        padding: 40px 0;
+    }
+
+    .sec06-ask {
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     /* -------------풋터 */
@@ -1618,6 +1579,16 @@ button {
 
     .footer-right {
         width: 100%;
+    }
+
+    .icon06 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom>p {
+        padding-top: 10px;
     }
 
 }
@@ -1647,9 +1618,11 @@ button {
         font-weight: 500;
         font-size: 12px;
         text-align: center;
+        margin-top: 10px;
     }
 
     .kv-text1 {
+        margin: 10px 0 0;
         font-size: 24px;
     }
 
@@ -1727,12 +1700,9 @@ button {
 
     /* -----580--sec02 그라디언트--------- */
 
-    .radial02 {
-        width: 120px;
-    }
-
+    .radial02,
     .radial03 {
-        width: 120px;
+        display: none;
     }
 
     /* -------580---------sec03 */
@@ -1760,12 +1730,12 @@ button {
     }
 
     /* ------------------580 sec06 */
-    .sec05 {
-        display: none;
-    }
-
     .sec06 {
         padding: 20px 0;
+    }
+
+    .sec06-img {
+        display: none;
     }
 
     .sec06-title {
@@ -1781,61 +1751,19 @@ button {
         font-size: 18px;
     }
 
-    .sec06-box {
-        width: 100%;
-        max-width: 420px;
-    }
-
-    .sec06-ask {
-        margin: 0 auto;
-    }
-
-    .sec06-img {
-        display: none;
-    }
-
     .sec06-item input {
-        width: 100%;
-        max-width: 300px;
-        margin: 5px 0;
-        padding: 10px 20px;
         font-size: 14px;
         border-radius: 10px;
     }
 
-    .sec06-kind {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 300px;
-        display: flex;
-    }
-
-    .sec06-kind input,
-    .select {
-        width: 100%;
-        max-width: 145px;
-        border-radius: 10px;
-    }
-
-    .selet {
-        margin-bottom: 10px;
-    }
-
     .sec06-btn {
-        width: 300px;
-        padding: 10px 60px;
         border-radius: 10px;
-        margin-top: 15px;
         font-size: 16px;
     }
 
     /* --------580--footer----------- */
     .footer {
         font-size: 12px;
-    }
-
-    .footer-bottom>p {
-        padding: 0;
     }
 
     .footer-right2 {

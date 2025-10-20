@@ -65,7 +65,6 @@ $(document).ready(function () {
 
     $(window).on('scroll', function () {
 
-
         //------sec03 등장 효과
 
         let scroll03 = $(window).scrollTop() + $(window).height();
@@ -102,6 +101,30 @@ $(document).ready(function () {
 
     });
 
+    //--------sec03 모바일 슬라이드 효과
+
+    // ------------sec03 580일때 스와이퍼 클래스 추가
+
+    let swiper03 = new Swiper(".mySwiper3", {
+        slidesPerView: 2,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        // breakpoints: {
+        //     1024: {
+        //         slidesPerView: 2,
+        //         spaceBetween: 30,
+        //         grid: {
+        //             rows: 2,
+        //         },
+        //     },
+        // },
+    });
     //------------sec04 슬라이드 효과
 
     let swiper04 = new Swiper(".mySwiper4", {
@@ -198,5 +221,3 @@ $(document).ready(function () {
 
 
 });
-
-
