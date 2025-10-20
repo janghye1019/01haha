@@ -239,6 +239,11 @@ button {
     z-index: 5;
 }
 
+.header-nav>li:hover {
+    color: var(--primary-color1);
+
+}
+
 /* --------------sec01 kv--------------------------- */
 .sec01 {
     width: 100%;
@@ -432,7 +437,6 @@ button {
 .sec02-title0 {
     text-align: center;
     margin-bottom: 40px;
-    /* padding: 0 0 0 20px; */
 }
 
 .sec02-b {
@@ -495,11 +499,6 @@ button {
     display: none;
 }
 
-/* 
-.sec02-img02 {
-    margin-bottom: 30px;
-} */
-
 .sec02-warn {
     font-size: 13px;
     font-weight: 400;
@@ -512,18 +511,17 @@ button {
     width: 100px;
 }
 
+/* 카드 스케일 움직임 다르게 */
 .sec02 .swiper-slide {
     opacity: 0.7;
     transform: scale(0.95);
-    transition: .2s all ease-in-out;
-
+    transition: 0.2s all ease-in-out;
 }
 
 .sec02 .swiper-slide-active {
     opacity: 1;
     transform: scale(1);
 }
-
 
 /* -------------sec02-----그라디언트---------- */
 .radial02 {
@@ -547,36 +545,41 @@ button {
 }
 
 /* --------------sec03 buy---------------------- */
-/* .sec03 {
-} */
-.tab-contants {
-    /* opacity: 0; */
-    /* height: 100%; */
-}
 
+/* .tab-contants { */
+/* opacity: 0; */
+/* height: 100%; */
+/* } */
+
+/* 나를 울린 ESK 부모스타일 따라가기 */
 .sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
     flex-direction: unset;
 }
-@media(min-width: 1023px) {
+
+/* 기본 설정된 마진 값빼기 */
+/* @media(min-width: 1023px) {
     .sec03-phone-list .swiper-slide:nth-of-type(2) {
         margin-top: 0 !important;
     }
+
     .sec03-phone-list .swiper-slide:nth-of-type(3) {
         margin-top: 30px !important;
     }
-}
+} */
 
+.tab-contants {
+    opacity: 0;
+}
 
 .active {
     opacity: 1;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
 }
 
 .sec03-title {
     padding-top: 100px;
     padding-bottom: 20px;
     text-align: center;
-
 }
 
 .sec03-tab {
@@ -590,7 +593,6 @@ button {
     color: var(--gray-color2);
     transform: translate(0.2s all ease-in-out);
 }
-
 
 .btn3 {
     font-size: 18px;
@@ -610,13 +612,13 @@ button {
 }
 
 .sec03-phone-list {
-    /* animation: fadeIn;
-    animation-duration: 1s; */
+    margin-bottom: 40px;
+    animation: fadeIn;
+    animation-duration: 1.5s;
 }
 
 .sec03-item {
     border: 1px solid var(--gray-color2);
-    /* height: calc((100% - 30px) / 2) !important; */
     box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     padding: 40px;
@@ -626,12 +628,10 @@ button {
     align-items: center;
     gap: 20px;
     background-color: #fff;
-    /* transform: translate(0.2s all ease-in-out); */
     transition: 0.2s all ease-in-out;
 }
 
 .sec03-item:hover {
-    /* border: 1px solid var(--primary-color1); */
     box-shadow: inset 0 0 0 2px var(--primary-color1);
 }
 
@@ -641,7 +641,6 @@ button {
 }
 
 .sec03-des {
-    /* padding: 20px; */
     text-align: right;
     width: 50%;
 }
@@ -704,6 +703,14 @@ button {
     border-radius: 20px;
     transition: .2s all ease-in-out;
 
+}
+
+.sec03-phone-list .swiper-slide:nth-of-type(2) {
+    margin-top: 0 !important;
+}
+
+.sec03-phone-list .swiper-slide:nth-of-type(3) {
+    margin-top: 30px !important;
 }
 
 .sec04-card img {
@@ -785,7 +792,6 @@ button {
     border-radius: 30px;
     max-width: 90px;
     padding: 5px 10px;
-
     font-weight: 600;
 }
 
@@ -851,7 +857,7 @@ button {
 }
 
 .sec06-item input {
-    width: clamp(240px, 28.5714vw, 400px);
+    width: clamp(250px, 28.5714vw, 400px);
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 15px;
@@ -862,7 +868,7 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
-    width: clamp(240px, 28.5714vw, 400px);
+    width: clamp(260px, 28.5714vw, 400px);
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
@@ -876,7 +882,7 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     color: var(--gray-color1);
-    width: clamp(115px, 13.5714vw, 190px);
+    width: clamp(120px, 13.5714vw, 190px);
     margin: 10px 0;
 }
 
@@ -905,7 +911,7 @@ button {
     background-color: var(--primary-color1);
     border: none;
     border-radius: 20px;
-    width: clamp(240px, 28.5714vw, 400px);
+    width: clamp(250px, 28.5714vw, 400px);
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -929,21 +935,24 @@ button {
 }
 
 .footer-bottom {
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 50px;
-}
-
-.footer-bottom>p {
-    padding: 20px 0 0 0;
+    padding: 40px 0 50px 0;
+    position: relative;
 }
 
 .footer-right2 {
     display: flex;
 }
 
+.footer-left>b,
+.sec06-b {
+    font-weight: 600;
+}
+
 .footer-left {
-    line-height: 1.5;
+    line-height: 2;
     margin-bottom: 40px;
 }
 
@@ -951,13 +960,8 @@ button {
     font-weight: 600;
 }
 
-.sec06-b {
-    font-weight: 600;
-}
-
 .footer-right {
-    width: 30%;
-    max-width: 284px;
+    width: 20%;
 }
 
 .icon06 {
@@ -978,10 +982,8 @@ button {
 
 .footer-right2 {
     font-weight: 600;
-    width: 282px;
-    padding: 40px 0 0 0;
-    position: relative;
-
+    width: 20%;
+    /* padding: 40px 0 0 0; */
 }
 
 .footer-right2 img {
@@ -989,11 +991,9 @@ button {
     top: 0;
     right: 0;
     width: 66px;
-
 }
 
 @media(max-width:1160px) {
-
 
     .container {
         width: 100%;
@@ -1011,7 +1011,7 @@ button {
     /* -----1160--sec01 kv------------ */
     .sec01 {
         width: 100%;
-        padding: 80px 0;
+        padding: 80px 0 60px 0;
     }
 
     .sec01-kv {
@@ -1081,7 +1081,7 @@ button {
     /* -----------1160----sec02----------- */
     .sec02 {
         width: 100%;
-        padding: 80px 0;
+        padding: 60px 0;
         margin: 0 auto;
     }
 
@@ -1102,10 +1102,6 @@ button {
 
     .benefit-card {
         padding: 30px;
-    }
-
-    .benefit-card>img {
-        object-fit: cover;
     }
 
     .sec02-card-title {
@@ -1131,7 +1127,7 @@ button {
     /* ---------1160-------sec03---------- */
 
     .sec03 {
-        padding: 80px 0;
+        padding: 60px 0;
         margin: 0 auto;
         width: 100%;
     }
@@ -1153,21 +1149,6 @@ button {
         font-size: 10px;
         padding: 20px 0 20px 0;
     }
-
-    /* .sec03-phone-list {
-        gap: 20px;
-    } */
-
-    /* .sec03-item {
-        width: calc((100% - 140px) / 8 * 4 + 60px);
-        padding: 25px;
-        gap: 10px;
-    } */
-
-    /* .sec03-item>img {
-        max-width: 190px;
-        width: clamp(150px, 18.5546vw, 190px);
-    } */
 
     .sec03-1160s {
         font-size: 20px;
@@ -1197,7 +1178,7 @@ button {
     .sec04 {
         width: 100%;
         box-sizing: border-box;
-        padding: 80px 0;
+        padding: 60px 0;
 
         overflow: hidden;
     }
@@ -1249,7 +1230,7 @@ button {
 
     /* -----1160 sec06----- */
     .sec06 {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .sec06-ask {
@@ -1287,13 +1268,20 @@ button {
 
     .footer-left {
         margin-bottom: 20px;
+    }
 
+    .footer-bottom {
+        padding-bottom: 0;
     }
 
     .footer-bottom>p {
-        padding: 40px 0 0 0;
+        font-size: 12px;
     }
 
+    .icon06 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 }
 
 /* ------------1024------------ */
@@ -1304,11 +1292,6 @@ button {
         max-width: 1024px;
         box-sizing: border-box;
         margin: 0 auto;
-    }
-
-    .sec01 {
-        width: 100%;
-        padding: 60px 0;
     }
 
     .sec01-minbox1 {
@@ -1336,15 +1319,11 @@ button {
         margin-top: 20px;
     }
 
-    /* --------1024--sec04----- */
-    .sec04 {
-        padding: 60px 0;
+    .sec03-phone-list .swiper-slide:nth-of-type(3) {
+        margin-top: 20px !important;
     }
 
     /* -------------1024---ask---- */
-    .sec06 {
-        padding: 60px 0;
-    }
 
     .sec06-ask {
         margin: 0 auto;
@@ -1415,7 +1394,7 @@ button {
         flex-direction: column-reverse;
         align-items: flex-start;
         padding: 20px 60px;
-        background-color: var(--sub-color1);
+        background-color: #ffefb3c4;
     }
 
     .hambuger-btn.hide {
@@ -1428,7 +1407,7 @@ button {
 
     /* --------768---sec01 kv */
     .sec01 {
-        padding: 60px 0;
+        padding: 0 0 40px 0;
     }
 
     .sec01-kv {
@@ -1474,6 +1453,9 @@ button {
     }
 
     /* --------768 sec02 */
+    .sec02 {
+        padding: 40px 0;
+    }
 
     .sec02-title0 {
         padding: 0 0 20px 0;
@@ -1484,14 +1466,13 @@ button {
     }
 
     .sec02-b {
-        font-size: 30px;
-        margin-bottom: 20px;
+        font-size: 24px;
     }
 
     /* --------768 sec03 시작하기*/
-    /* .sec03-phone-list {
-        gap: 20px;
-    } */
+    .sec03 {
+        padding: 40px 0;
+    }
 
     .sec03-tab {
         gap: 40px;
@@ -1502,16 +1483,13 @@ button {
         padding: 5px 15px;
     }
 
-    /* .sec03-item {
-        width: calc((100%-100px) / 6 * 3 + 40px);
-        flex-wrap: nowrap;
-        flex-direction: column;
-    } */
+    .sec03-item {
+        padding: 20px;
+    }
 
     .sec03-item>img {
         margin-bottom: 10px;
         object-fit: cover;
-
     }
 
     .sec03-des {
@@ -1529,7 +1507,15 @@ button {
         font-weight: 500;
     }
 
+    .sec03-phone-list .swiper-slide:nth-of-type(3) {
+        margin-top: 20px !important;
+    }
+
     /* ---------768 sec04 */
+    .sec04 {
+        padding: 40px 0;
+    }
+
     .sec04-title {
         padding-bottom: 20px;
     }
@@ -1576,27 +1562,40 @@ button {
         padding: 0 20px;
     }
 
+    .sec06-img {
+        transform: translateY(124px);
+        height: 100%;
+        min-height: 293px;
+    }
+
     /* -------------풋터 */
     .footer-wrap {
         flex-direction: column;
     }
 
-    .footer-bottom {
-        padding: 0 0 40px 0;
+    .footer-right {
+        width: 78%;
     }
 
-    .footer-right {
-        width: 100%;
+    .footer-right2 {
+        width: 23%;
     }
+
+    .footer-right2>img {
+        width: 44px;
+        top: 15px;
+        right: 160px;
+    }
+
 
     .icon06 {
         font-size: 18px;
         font-weight: 400;
-        margin-bottom: 10px;
     }
 
-    .footer-bottom>p {
-        padding-top: 10px;
+    .footer-bottom {
+        justify-content: flex-start;
+        gap: 20px;
     }
 
 }
@@ -1682,7 +1681,7 @@ button {
     }
 
     .benefit-card img {
-        height: 200px;
+        height: 150px;
         object-fit: cover;
     }
 
@@ -1717,6 +1716,10 @@ button {
 
     .sec03-item {
         width: 100%;
+    }
+
+    .sec03-phone-list .swiper-slide:nth-of-type(4) {
+        margin-top: 20px !important;
     }
 
     /* ----- 580--sec04 */
@@ -1776,5 +1779,9 @@ button {
 
     .footer-right2 {
         display: none;
+    }
+
+    .footer-right {
+        width: 100%;
     }
 }

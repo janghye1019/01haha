@@ -25,7 +25,7 @@ $(document).ready(function () {
             el: ".visual-swiper .swiper-pagination",
         },
         loop: true,
-        // autoplay: true
+        autoplay: true
     });
 
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
         slidesPerView: 1.5,
         spaceBetween: 20,
-        // autoplay: true,
+        autoplay: true,
         centeredSlides: true,
         loop: true,
         loopedSlides: 2,
@@ -52,14 +52,6 @@ $(document).ready(function () {
             560: {
                 slidesPerView: 2
             },
-            // 420: {
-            //     slidesPerView: 1.5,
-
-            // },
-            // 0: {
-            //     slidesPerView: 1,
-            // },
-
         },
     });
 
@@ -105,7 +97,7 @@ $(document).ready(function () {
 
     // ------------sec03 580일때 스와이퍼 클래스 추가
 
-        let swiper03 = new Swiper(".mySwiper3", {
+    let swiper03 = new Swiper(".mySwiper3", {
         slidesPerView: 1,
         grid: {
             rows: 2,
@@ -133,7 +125,6 @@ $(document).ready(function () {
         pagination: {
             el: ".mySwiper4 .swiper-pagination",
         },
-        // slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
         // centeredSlides: true,
@@ -165,18 +156,6 @@ $(document).ready(function () {
         },
     });
 
-    //    ----------------SEC04 버튼
-    // $(".swiper-button-next, .swiper-button-prev")
-    //     .on("click", function () {
-    //         let btn04 = $(this);
-
-    //         btn04.css("color", "#ffc800");
-    //         setTimeout(function () {
-    //             $(btn04).css("color", "#717071");
-    //         }, 100);
-    //     });
-
-
     // ----------------sec05 슬라이드 효과
 
     let swiper05 = new Swiper(".mySwiper5", {
@@ -206,7 +185,7 @@ $(document).ready(function () {
 
             },
             1023: {
-                slidesPerView: 2.8,
+                slidesPerView: 2.6,
 
             },
             750: {
