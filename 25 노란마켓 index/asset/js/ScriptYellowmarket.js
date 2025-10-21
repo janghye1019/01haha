@@ -130,7 +130,7 @@ $(document).ready(function () {
         // centeredSlides: true,
         breakpoints: {
             1159: {
-                slidesPerView: 4.4,
+                slidesPerView: 4.3,
 
             },
             1023: {
@@ -164,7 +164,7 @@ $(document).ready(function () {
             disableOnInteraction: false,
         },
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 20,
         loop: true,
         speed: 2000,
         loopAdditionalSlides: 2,
@@ -180,13 +180,20 @@ $(document).ready(function () {
 
         //이하가 아니라 이상일때
         breakpoints: {
+            1540: {
+                slidesPerView: 4.6,
+            },
+            1270: {
+                slidesPerView: 3.6,
+            },
             1161: {
-                slidesPerView: 4.4,
-
+                slidesPerView: 3,
             },
             1023: {
                 slidesPerView: 2.6,
-
+            },
+            769: {
+                slidesPerView: 2.0,
             },
             750: {
                 slidesPerView: 2.4,

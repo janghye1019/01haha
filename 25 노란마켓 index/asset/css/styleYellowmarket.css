@@ -154,12 +154,12 @@ button {
 
 .sub-title1 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     color: var(--black-color);
 }
 
 .sub-title2 {
-    font-size: 20px;
+    font-size: clamp(16px, 2.3437vw, 20px);
 }
 
 .f-sub-t2 {
@@ -167,7 +167,7 @@ button {
 }
 
 .font-des1 {
-    font-size: 13px;
+    font-size: clamp(12px, 0.8333vw, 14px);
 }
 
 /* -------------------------font-weight-------------- */
@@ -250,7 +250,7 @@ button {
 /* --------------sec01 kv--------------------------- */
 .sec01 {
     width: 100%;
-    padding: 100px 0;
+    padding: 140px 0 100px 0;
 }
 
 .sec01-kv {
@@ -506,7 +506,7 @@ button {
     font-size: 13px;
     font-weight: 400;
     margin-top: 30px;
-    color: var(--gray-color1);
+    color: rgb(190, 190, 190);
 }
 
 .sec02 .swiper-pagination {
@@ -549,26 +549,10 @@ button {
 
 /* --------------sec03 buy---------------------- */
 
-/* .tab-contants { */
-/* opacity: 0; */
-/* height: 100%; */
-/* } */
-
-/* 나를 울린 ESK 부모스타일 따라가기 */
+/* ESK... 부모스타일 따라가기 */
 .sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
     flex-direction: unset;
 }
-
-/* 기본 설정된 마진 값빼기 */
-/* @media(min-width: 1023px) {
-    .sec03-phone-list .swiper-slide:nth-of-type(2) {
-        margin-top: 0 !important;
-    }
-
-    .sec03-phone-list .swiper-slide:nth-of-type(3) {
-        margin-top: 30px !important;
-    }
-} */
 
 .tab-contants {
     opacity: 0;
@@ -648,12 +632,23 @@ button {
     width: 50%;
 }
 
-.sec03-des img {
-    max-width: 200px;
-    padding: 10px 0 20px 0;
-
+/* -----sec03 이미지 컬러칩 */
+.sec03-color1 {
+    width: clamp(75px, 10.4166vw, 110px);
+    padding: 10px 0;
 }
 
+.sec03-color2 {
+    width: clamp(100px, 10.4166vw, 160px);
+    padding: 10px 0;
+}
+
+.sec03-color3 {
+    width: clamp(55px, 10.4166vw, 85px);
+    padding: 10px 0;
+}
+
+/* ---------------------- */
 .sec03-dec-in {
     padding-bottom: 10px;
 }
@@ -743,7 +738,7 @@ button {
     -webkit-line-clamp: 4;
 }
 
-/* --------------sec05 ask or inquiry------------- */
+/* --------sec05 ask or inquiry----------- */
 
 .sec05 {
     width: 100%;
@@ -860,7 +855,7 @@ button {
 }
 
 .sec06-item input {
-    width: clamp(250px, 28.5714vw, 400px);
+    width: clamp(240px, 28.5714vw, 400px);
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 15px;
@@ -871,7 +866,7 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
-    width: clamp(260px, 28.5714vw, 400px);
+    width: clamp(250px, 28.5714vw, 400px);
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
@@ -885,7 +880,7 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     color: var(--gray-color1);
-    width: clamp(120px, 13.5714vw, 190px);
+    width: clamp(110px, 13.5714vw, 190px);
     margin: 10px 0;
 }
 
@@ -914,7 +909,7 @@ button {
     background-color: var(--primary-color1);
     border: none;
     border-radius: 20px;
-    width: clamp(250px, 28.5714vw, 400px);
+    width: clamp(240px, 28.5714vw, 400px);
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -930,6 +925,7 @@ button {
     width: 100%;
     background-color: var(--white-color);
     padding: 60px 0 0 0;
+    background-color: #fcfcfc;
 }
 
 .footer-wrap {
@@ -942,11 +938,11 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 40px 0 50px 0;
-    position: relative;
 }
 
 .footer-right2 {
     display: flex;
+    position: relative;
 }
 
 .footer-left>b,
@@ -964,7 +960,7 @@ button {
 }
 
 .footer-right {
-    width: 20%;
+    width: clamp(230px, 13.5416vw, 260px);
 }
 
 .icon06 {
@@ -986,13 +982,13 @@ button {
 .footer-right2 {
     font-weight: 600;
     width: 20%;
-    /* padding: 40px 0 0 0; */
 }
 
 .footer-right2 img {
     position: absolute;
     top: 0;
-    right: 0;
+    left: clamp(80px, 80%, 200px);
+    transform: translateY(-40px);
     width: 66px;
 }
 
@@ -1014,13 +1010,13 @@ button {
     /* -----1160--sec01 kv------------ */
     .sec01 {
         width: 100%;
-        padding: 80px 0 60px 0;
+        padding: 140px 0 60px 0;
     }
 
     .sec01-kv {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 40px;
     }
 
     .sec01-visual {
@@ -1143,7 +1139,6 @@ button {
         padding: 0 0 10px 0;
     }
 
-
     .f-title1 {
         font-size: 30px;
     }
@@ -1154,11 +1149,10 @@ button {
     }
 
     .sec03-1160s {
-        font-size: 20px;
+        font-size: clamp(14px, 1.7241vw, 20px);
     }
 
     .sec03-des img {
-        max-width: 120px;
         padding-bottom: 10px;
     }
 
@@ -1173,7 +1167,6 @@ button {
     .sec03-btn4 {
         margin: 20px auto 0;
         letter-spacing: 01px;
-        padding: 10px 20px;
         font-size: 16px;
     }
 
@@ -1182,7 +1175,6 @@ button {
         width: 100%;
         box-sizing: border-box;
         padding: 60px 0;
-
         overflow: hidden;
     }
 
@@ -1343,7 +1335,6 @@ button {
         border-radius: 15px;
     }
 
-
 }
 
 /* ------------768-------------- */
@@ -1410,12 +1401,13 @@ button {
 
     /* --------768---sec01 kv */
     .sec01 {
-        padding: 0 0 40px 0;
+        padding: 40px 0;
     }
 
     .sec01-kv {
         margin-top: 0;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     .sec01-visual {
@@ -1497,17 +1489,16 @@ button {
 
     .sec03-des {
         width: 100%;
-        padding: 0;
-        text-align: center;
+        padding: 0 10px 0 0;
     }
 
     .sec03-des img {
-        max-width: 150px;
         padding-bottom: 10px 0 5px 0;
     }
 
     .sec03-btn4 {
         font-weight: 500;
+        margin: 0 auto;
     }
 
     .sec03-phone-list .swiper-slide:nth-of-type(3) {
@@ -1525,10 +1516,6 @@ button {
 
     .sec04-T {
         padding-bottom: 0;
-    }
-
-    .sub-title2 {
-        font-size: 18px;
     }
 
     .sec04-mo {
@@ -1566,18 +1553,12 @@ button {
     }
 
     .sec06-img {
-        transform: translateY(124px);
-        height: 100%;
-        min-height: 293px;
+        display: none;
     }
 
     /* -------------풋터 */
     .footer-wrap {
         flex-direction: column;
-    }
-
-    .footer-right {
-        width: 78%;
     }
 
     .footer-right2 {
@@ -1590,10 +1571,13 @@ button {
         right: 160px;
     }
 
-
     .icon06 {
         font-size: 18px;
         font-weight: 400;
+    }
+
+    .icon06>img {
+        width: 26px;
     }
 
     .footer-bottom {
@@ -1609,6 +1593,10 @@ button {
     .header-container {
         width: 100%;
         height: 50px;
+    }
+
+    .header-nav {
+        font-size: 14px;
     }
 
     /* ----------580-------sec01 */
@@ -1716,6 +1704,10 @@ button {
     }
 
     /* -------580---------sec03 */
+    .sec03-tab {
+        font-size: 12px;
+        gap: 20px;
+    }
 
     .sec03-item {
         width: 100%;
@@ -1782,9 +1774,5 @@ button {
 
     .footer-right2 {
         display: none;
-    }
-
-    .footer-right {
-        width: 100%;
     }
 }
