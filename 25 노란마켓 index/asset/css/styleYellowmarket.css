@@ -148,7 +148,7 @@ button {
 
 .active {
     opacity: 1;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
 }
 
 /* --------------------------글씨 크기 , 굵기 만들어 놓기 */
@@ -248,7 +248,7 @@ button {
 .header-nav>li:hover {
     color: var(--primary-color1);
     transform: scale(1.1);
-    transition: 0.1s all ease-in-out;
+    transition: 0.2s all ease-in-out;
 
 
 }
@@ -465,9 +465,9 @@ button {
 }
 
 /* -----sec02 모션 */
-/* .sec02-animate {
+.sec02-why {
     opacity: 0;
-} */
+}
 
 /* -------sec02 카드란 */
 
@@ -565,6 +565,10 @@ button {
 
 /* --------------sec03 buy---------------------- */
 
+.sec03-title-wrap {
+    opacity: 0;
+}
+
 /* ESK... 부모스타일 따라가기 */
 .sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
     flex-direction: unset;
@@ -612,7 +616,7 @@ button {
 .sec03-phone-list {
     margin-bottom: 40px;
     animation: fadeIn;
-    animation-duration: 1.2s;
+    animation-duration: 0.8s;
 }
 
 .sec03-item {
@@ -667,7 +671,7 @@ button {
 
 .sec03-btn4 {
     display: block;
-    margin: 40px auto 0;
+    margin: 0 auto;
     text-decoration: underline;
     letter-spacing: -0.3px;
     border: 0;
@@ -686,24 +690,23 @@ button {
 }
 
 
-/* --------------sec04 review----------------------- */
+/* ----------sec04 review----------------- */
 
 .sec04 {
     padding: 100px 0;
 }
 
 .sec04-T {
-    padding: 20px;
+    padding: 0 0 10px 0;
 }
-
 
 .sec04-title {
     text-align: center;
     padding: 0 0 40px 0;
 }
 
+
 .sec04-card-list {
-    opacity: 0;
     margin-bottom: 50px;
 }
 
@@ -714,7 +717,6 @@ button {
     box-shadow: inset 0 0 0 1px var(--gray-color2);
     border-radius: 20px;
     transition: .2s all ease-in-out;
-
 }
 
 .sec03-phone-list .swiper-slide:nth-of-type(2) {
@@ -732,6 +734,8 @@ button {
 
 .sec04-card:hover {
     box-shadow: inset 0 0 0 2px var(--primary-color1);
+    transform: scale(0.99);
+    transition: 0.2s all ease-in-out;
 }
 
 .sec04-card-des img {
@@ -834,11 +838,12 @@ button {
 }
 
 .sec06-img {
-    width: clamp(150px, 31.4285vw, 440px);
+    width: clamp(150px, 31.4285vw, 430px);
     background-image: url(../image/병아리\ 문의\ 1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    opacity: 0;
 }
 
 .sec06-box {
@@ -847,6 +852,7 @@ button {
     background-color: var(--white-color);
     border-radius: 20px;
     padding: 80px;
+    opacity: 0;
 }
 
 .sec06-box h2 {
@@ -869,8 +875,8 @@ button {
 }
 
 .sec06-item input {
-    width: clamp(240px, 28.5714vw, 400px);
-    padding: 10px 10px;
+    width: clamp(250px, 28.5714vw, 400px);
+    padding: 10px;
     font-size: 16px;
     border-radius: 10px;
     border: 1px solid var(--gray-color-sub);
@@ -880,12 +886,10 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
-    width: clamp(250px, 28.5714vw, 400px);
+    width: clamp(250px, 28.5714vw, 420px);
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
-    /* 화살표 걸어놓음 */
-    position: relative;
 }
 
 .sec06-kind input,
@@ -897,17 +901,21 @@ button {
     color: var(--gray-color1);
     width: clamp(110px, 13.5714vw, 190px);
     margin: 10px 0;
+
 }
 
-.select {
-    appearance: none;
+.sec06-select {
+    position: relative;
 }
 
 .sec06-arrow {
     position: absolute;
     top: 40%;
-    right: 20px;
-    pointer-events: none;
+    right: 10%;
+}
+
+.select {
+    appearance: none;
 }
 
 .sec06 input:focus,
@@ -923,8 +931,8 @@ button {
 
     background-color: var(--primary-color1);
     border: none;
-    border-radius: 20px;
-    width: clamp(240px, 28.5714vw, 400px);
+    border-radius: 15px;
+    width: clamp(240px, 28.5714vw, 410px);
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -1766,8 +1774,9 @@ button {
 
     .sec06-item input,
     .select {
+        width: clamp(200px, 43.1034vw, 250px);
         font-size: 14px;
-        border-radius: 10px;
+
     }
 
     .sec06-kind {
@@ -1776,11 +1785,13 @@ button {
 
     .sec06-kind input,
     .select {
-        width: clamp(0px, 43.1034vw, 250px);
+        width: clamp(200px, 43.1034vw, 250px);
+        font-size: 14px;
+        padding: 10px;
     }
 
     .sec06-arrow {
-        top: 76%;
+        top: 45%;
     }
 
     .select {

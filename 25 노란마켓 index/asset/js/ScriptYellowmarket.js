@@ -34,39 +34,51 @@ $(document).ready(function () {
 
         //------sec02 등장 효과
 
-        // let scroll02 = $(window).scrollTop() + $(window).height();
-        // let sec02Pos = $('.sec02').offset().top;
+        $('.sec02-why').each(function () {
+            let $this = $(this);
 
-        // if (scroll02 > sec02Pos + ($('.sec02').height() * 0.4)) {
-        //     $('.sec02-animate').addClass('animate__animated animate__fadeInUp');
-        //     $("sec02-animate").addClass("active");
-        // }
-        // ------------sec02 슬라이드 효과
+            let bottom_of_object = $this.offset().top + $this.outerHeight();
+            let bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if (bottom_of_window > bottom_of_object / 2) {
+                $this.addClass('active');
+                $this.stop().animate({ 'opacity': '1' }, 250);
+            }
+        });
 
         //------sec03 등장 효과
-
         let scroll03 = $(window).scrollTop() + $(window).height();
         let sec03Pos = $('.sec03').offset().top;
 
-        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.3)) {
-            $('.tab-contants').addClass('animate__animated animate__fadeInUp');
-            $(".tab-contants").addClass("active");
+        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.2)) {
+            $(".sec03-title-wrap").addClass('animate__animated animate__fadeInUp active');
         }
 
+        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.3)) {
+            $('.tab-contants').addClass('animate__animated animate__fadeInUp active');
+        }
         // --------sec04등장
 
         let scroll04 = $(window).scrollTop() + $(window).height();
-        // 섹션의 위쪽 위치
-        let sec04Pos = $('.sec04').offset().top;
 
-        // .sec03의 20% 지점쯤 화면에 들어오면 실행
+        let sec04Pos = $('.sec04').offset().top;
         if (scroll04 > sec04Pos + ($('.sec04').height() * 0.25)) {
-            $('.sec04-card-wrap').addClass('animate__animated animate__slideInRight');
-            $(".sec04-card-wrap").addClass("active");
+            $(".sec04-card-wrap").addClass('animate__animated animate__slideInRight active');
         }
+        // -----sec06 등장효과
+        let scroll06 = $(window).scrollTop() + $(window).height();
+        let sec06Pos = $('.sec06').offset().top;
+
+        if (scroll06 > sec06Pos + ($('.sec06').height() * 0.15)) {
+            $('.sec06-img').addClass('animate__animated animate__fadeInUp active');
+        }
+        if (scroll06 > sec06Pos + ($('.sec06').height() * 0.3)) {
+            $('.sec06-box').stop().animate({ 'opacity': '1' }, 250);
+        }
+
     });
 
-
+    //---------sec02 슬라이드효과
     let swiper02 = new Swiper(".mySwiper2", {
 
         slidesPerView: 1.5,
@@ -89,9 +101,9 @@ $(document).ready(function () {
                 slidesPerView: 2
             },
         },
-    },);
-    //----------sec03 버튼 클릭 효과
+    });
 
+    //----------sec03 버튼 클릭 효과
     $(".sec03-tab li").on("click", function () {
         let idx = $(this).index();
 
@@ -100,13 +112,9 @@ $(document).ready(function () {
 
         $(".tab-contants > div").hide();
         $(".tab-contants > div").eq(idx).show();
-
     });
 
     //--------sec03 모바일 슬라이드 효과
-
-    // ------------sec03 580일때 스와이퍼 클래스 추가
-
     let swiper03 = new Swiper(".mySwiper3", {
         slidesPerView: 1,
         grid: {
@@ -127,25 +135,20 @@ $(document).ready(function () {
             },
         },
     });
+
     //------------sec04 슬라이드 효과
-
     let swiper04 = new Swiper(".mySwiper4", {
-
-        // cssMode: true,
         pagination: {
             el: ".mySwiper4 .swiper-pagination",
         },
         spaceBetween: 30,
         loop: true,
-        // centeredSlides: true,
         breakpoints: {
             1159: {
                 slidesPerView: 4.3,
-
             },
             1023: {
                 slidesPerView: 3.5,
-
             },
             760: {
                 slidesPerView: 3,
@@ -167,7 +170,6 @@ $(document).ready(function () {
     });
 
     // ----------------sec05 슬라이드 효과
-
     let swiper05 = new Swiper(".mySwiper5", {
         autoplay: {
             delay: 0,
@@ -215,5 +217,5 @@ $(document).ready(function () {
         },
     });
 
-
 });
+
