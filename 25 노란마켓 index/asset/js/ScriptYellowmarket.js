@@ -29,14 +29,50 @@ $(document).ready(function () {
     });
 
 
-    // ------------sec02 슬라이드 효과
+
+    $(window).on('scroll', function () {
+
+        //------sec02 등장 효과
+
+        // let scroll02 = $(window).scrollTop() + $(window).height();
+        // let sec02Pos = $('.sec02').offset().top;
+
+        // if (scroll02 > sec02Pos + ($('.sec02').height() * 0.4)) {
+        //     $('.sec02-animate').addClass('animate__animated animate__fadeInUp');
+        //     $("sec02-animate").addClass("active");
+        // }
+        // ------------sec02 슬라이드 효과
+
+        //------sec03 등장 효과
+
+        let scroll03 = $(window).scrollTop() + $(window).height();
+        let sec03Pos = $('.sec03').offset().top;
+
+        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.3)) {
+            $('.tab-contants').addClass('animate__animated animate__fadeInUp');
+            $(".tab-contants").addClass("active");
+        }
+
+        // --------sec04등장
+
+        let scroll04 = $(window).scrollTop() + $(window).height();
+        // 섹션의 위쪽 위치
+        let sec04Pos = $('.sec04').offset().top;
+
+        // .sec03의 20% 지점쯤 화면에 들어오면 실행
+        if (scroll04 > sec04Pos + ($('.sec04').height() * 0.25)) {
+            $('.sec04-card-wrap').addClass('animate__animated animate__slideInRight');
+            $(".sec04-card-wrap").addClass("active");
+        }
+    });
+
 
     let swiper02 = new Swiper(".mySwiper2", {
 
         slidesPerView: 1.5,
         spaceBetween: 20,
-        autoplay: true,
         centeredSlides: true,
+        autoplay: true,
         loop: true,
         loopedSlides: 2,
         breakpoints: {
@@ -53,33 +89,7 @@ $(document).ready(function () {
                 slidesPerView: 2
             },
         },
-    });
-
-    $(window).on('scroll', function () {
-
-        //------sec03 등장 효과
-
-        let scroll03 = $(window).scrollTop() + $(window).height();
-        let sec03Pos = $('.sec03').offset().top;
-
-        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.25)) {
-            $('.tab-contants').addClass('animate__animated animate__fadeInUp');
-            $(".tab-contants").addClass("active");
-        }
-
-        // --------sec04등장
-
-        // let scroll04 = $(window).scrollTop() + $(window).height();
-        // // 섹션의 위쪽 위치
-        // let sec04Pos = $('.sec04').offset().top;
-
-        // // .sec03의 20% 지점쯤 화면에 들어오면 실행
-        // if (scroll04 > sec04Pos + ($('.sec04').height() * 0.3)) {
-        //     $('.sec04-card-wrap').addClass('animate__animated animate__slideInRight');
-        //     $(".sec04-card-wrap").addClass("active2");
-        // }
-    });
-
+    },);
     //----------sec03 버튼 클릭 효과
 
     $(".sec03-tab li").on("click", function () {
