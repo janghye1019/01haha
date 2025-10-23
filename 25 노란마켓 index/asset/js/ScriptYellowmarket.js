@@ -28,65 +28,6 @@ $(document).ready(function () {
         autoplay: true
     });
 
-
-
-    $(window).on('scroll', function () {
-
-        //------sec02 등장 효과
-
-        $('.sec02-why').each(function () {
-            let $this = $(this);
-
-            let bottom_of_object = $this.offset().top + $this.outerHeight();
-            let bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            if (bottom_of_window > bottom_of_object / 2) {
-                $this.addClass('active');
-                $this.stop().animate({ 'opacity': '1' }, 250);
-            }
-        });
-
-        //------sec03 등장 효과
-        let scroll03 = $(window).scrollTop() + $(window).height();
-        let sec03Pos = $('.sec03').offset().top;
-
-        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.2)) {
-            $(".sec03-title-wrap").addClass("animate__animated animate__fadeInUp active");
-        } else {
-            $(".sec03-title-wrap").removeClass("animate__animated animate__fadeInUp active");
-        }
-        if (scroll03 > sec03Pos + ($('.sec03').height() * 0.3)) {
-            $(".tab-contants").addClass("animate__animated animate__fadeInUp active");
-        } else {
-            $(".tab-contants").removeClass("animate__animated animate__fadeInUp active");
-        }
-        // --------sec04등장
-
-        let scroll04 = $(window).scrollTop() + $(window).height();
-
-        let sec04Pos = $('.sec04').offset().top;
-        if (scroll04 > sec04Pos + ($('.sec04').height() * 0.25)) {
-            $(".sec04-card-wrap").addClass("animate__animated animate__slideInRight active");
-        } else {
-            $(".sec04-card-wrap").removeClass("animate__animated animate__slideInRight active");
-        }
-        // -----sec06 등장효과
-        let scroll06 = $(window).scrollTop() + $(window).height();
-        let sec06Pos = $(".sec06").offset().top;
-
-        if (scroll06 > sec06Pos + ($(".sec06").height() * 0.15)) {
-            $(".sec06-img").addClass("animate__animated animate__fadeInUp active");
-        } else {
-            $(".sec06-img").removeClass("animate__animated animate__fadeInUp active");
-        }
-        if (scroll06 > sec06Pos + ($(".sec06").height() * 0.3)) {
-            $(".sec06-box").stop().animate({ 'opacity': '1' }, 250);
-        } else {
-            $(".sec06-box").stop().animate({ 'opacity': '0' }, 250);
-        }
-
-    });
-
     //---------sec02 슬라이드효과
     let swiper02 = new Swiper(".mySwiper2", {
 

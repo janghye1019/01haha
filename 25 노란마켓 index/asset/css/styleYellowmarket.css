@@ -465,9 +465,9 @@ button {
 }
 
 /* -----sec02 모션 */
-.sec02-why {
+/* .sec02-why {
     opacity: 0;
-}
+} */
 
 /* -------sec02 카드란 */
 
@@ -565,18 +565,18 @@ button {
 
 /* --------------sec03 buy---------------------- */
 
-.sec03-title-wrap {
+/* .sec03-title-wrap {
     opacity: 0;
-}
+} */
 
 /* ESK... 부모스타일 따라가기 */
 .sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
     flex-direction: unset;
 }
 
-.tab-contants {
+/* .tab-contants {
     opacity: 0;
-}
+} */
 
 .sec03-title {
     padding-top: 100px;
@@ -843,7 +843,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .sec06-box {
@@ -852,7 +852,7 @@ button {
     background-color: var(--white-color);
     border-radius: 20px;
     padding: 80px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .sec06-box h2 {
@@ -875,7 +875,7 @@ button {
 }
 
 .sec06-item input {
-    width: clamp(250px, 28.5714vw, 400px);
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border-radius: 10px;
@@ -886,10 +886,10 @@ button {
 .sec06-kind {
     display: flex;
     margin-bottom: 20px;
-    width: clamp(250px, 28.5714vw, 420px);
     margin: 0 auto;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
 }
 
 .sec06-kind input,
@@ -899,18 +899,29 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
     color: var(--gray-color1);
-    width: clamp(110px, 13.5714vw, 190px);
     margin: 10px 0;
 
 }
 
+/* //부모한테 먼저주고 자식요소 한테 주기 */
+.sec06-kind label {
+    flex: 1 1 50%;
+}
+
 .sec06-select {
+    /* 화살표 걸기 */
     position: relative;
+    flex: 1 1 50%;
+}
+
+.sec06-kind input,
+.sec06-kind .select {
+    width: 100%;
 }
 
 .sec06-arrow {
     position: absolute;
-    top: 40%;
+    top: 45%;
     right: 10%;
 }
 
@@ -932,7 +943,7 @@ button {
     background-color: var(--primary-color1);
     border: none;
     border-radius: 15px;
-    width: clamp(240px, 28.5714vw, 410px);
+    width: 100%;
     margin-top: 20px;
     padding: 20px 20px;
 }
@@ -1773,29 +1784,27 @@ button {
     }
 
     .sec06-item input,
+    .sec06-kind input,
     .select {
-        width: clamp(200px, 43.1034vw, 250px);
         font-size: 14px;
-
+        padding: 10px;
     }
 
     .sec06-kind {
         flex-direction: column;
     }
 
-    .sec06-kind input,
-    .select {
-        width: clamp(200px, 43.1034vw, 250px);
-        font-size: 14px;
-        padding: 10px;
+    .sec06-kind label {
+        width: 100%;
+    }
+
+    .sec06-select {
+        width: 100%;
+        margin: 0;
     }
 
     .sec06-arrow {
-        top: 45%;
-    }
-
-    .select {
-        margin-top: 10px;
+        top: 36%;
     }
 
     .sec06-btn {
