@@ -128,7 +128,6 @@ li {
     list-style: none;
 }
 
-
 button {
     background-color: #ffffff;
     border: none;
@@ -157,7 +156,6 @@ button {
     font-size: 45px;
 }
 
-
 .sub-title1 {
     font-weight: 700;
     font-size: 24px;
@@ -184,7 +182,6 @@ button {
 .fb2 {
     font-weight: 600;
 }
-
 
 .fl1 {
     font-weight: 400;
@@ -249,8 +246,6 @@ button {
     color: var(--primary-color1);
     transform: scale(1.1);
     transition: 0.2s all ease-in-out;
-
-
 }
 
 /* --------------sec01 kv--------------------------- */
@@ -294,7 +289,6 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .visual-swiper {
@@ -363,7 +357,6 @@ button {
 
     border: none;
     background-color: var(--white-color);
-
 }
 
 .ask1 {
@@ -405,7 +398,6 @@ button {
     margin-top: 60px;
 }
 
-/* ----높이값 없애기 */
 .sec01-box2 img {
     width: 80px;
     height: 85px;
@@ -430,11 +422,9 @@ button {
 }
 
 .sec01-sub-des {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 300;
 }
-
-
 
 /* -----sec02 why------------ */
 .sec02 {
@@ -464,11 +454,6 @@ button {
     font-weight: 700;
 }
 
-/* -----sec02 모션 */
-/* .sec02-why {
-    opacity: 0;
-} */
-
 /* -------sec02 카드란 */
 
 .benefit-card {
@@ -491,7 +476,6 @@ button {
 
     background-color: var(--primary-color2);
     border-radius: 10px;
-
 }
 
 .n5 {
@@ -565,18 +549,10 @@ button {
 
 /* --------------sec03 buy---------------------- */
 
-/* .sec03-title-wrap {
-    opacity: 0;
-} */
-
 /* ESK... 부모스타일 따라가기 */
 .sec03 .swiper-grid-column>.swiper-wrapper.sec03-phone-list {
     flex-direction: unset;
 }
-
-/* .tab-contants {
-    opacity: 0;
-} */
 
 .sec03-title {
     padding-top: 100px;
@@ -648,7 +624,7 @@ button {
     width: 50%;
 }
 
-/* -----sec03 이미지 컬러칩 */
+/* -----sec03 핸드폰 이미지 컬러칩 */
 .sec03-color1 {
     width: clamp(75px, 10.4166vw, 110px);
     padding: 10px 0;
@@ -689,11 +665,10 @@ button {
     display: none;
 }
 
-
 /* ----------sec04 review----------------- */
 
 .sec04 {
-    padding: 100px 0;
+    padding: 140px 0 100px 0;
 }
 
 .sec04-T {
@@ -704,7 +679,6 @@ button {
     text-align: center;
     padding: 0 0 40px 0;
 }
-
 
 .sec04-card-list {
     margin-bottom: 50px;
@@ -748,7 +722,7 @@ button {
 .des04 {
     overflow: hidden;
     margin-top: 3px;
-    font-size: 15px;
+    font-size: 14px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -843,7 +817,6 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* opacity: 0; */
 }
 
 .sec06-box {
@@ -852,7 +825,6 @@ button {
     background-color: var(--white-color);
     border-radius: 20px;
     padding: 80px;
-    /* opacity: 0; */
 }
 
 .sec06-box h2 {
@@ -894,13 +866,12 @@ button {
 
 .sec06-kind input,
 .select {
-    font-size: 15px;
+    font-size: 16px;
     border: 1px solid var(--gray-color-sub);
     padding: 10px 20px;
     border-radius: 10px;
     color: var(--gray-color1);
     margin: 10px 0;
-
 }
 
 /* //부모한테 먼저주고 자식요소 한테 주기 */
@@ -950,7 +921,6 @@ button {
 
 .sec06-btn:hover {
     color: var(--white-color);
-
 }
 
 /* ----------------------footer--------- */
@@ -1034,7 +1004,6 @@ button {
         max-width: 1160px;
         box-sizing: border-box;
         margin: 0 auto;
-
     }
 
     .header-nav {
@@ -1228,9 +1197,7 @@ button {
     }
 
     .des04 {
-        overflow: hidden;
         margin-top: 3px;
-        font-size: 15px;
         color: var(--gray-color1);
     }
 
@@ -1344,7 +1311,6 @@ button {
     }
 
     /* -----kv 다시체크하기 */
-
     .benefit-card {
         margin-top: 20px;
     }
@@ -1423,7 +1389,6 @@ button {
         align-items: center;
         padding: 20px 60px;
         background: linear-gradient(0deg, #fffffff1, #fff1bc);
-        ;
     }
 
     .hambuger-btn.hide {
