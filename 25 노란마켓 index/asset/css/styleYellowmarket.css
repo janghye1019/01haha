@@ -928,7 +928,7 @@ button {
 .footer {
     width: 100%;
     background-color: var(--white-color);
-    padding: 60px 0 0 0;
+    padding: 40px 0 0 0;
     background-color: #fcfcfc;
     word-break: keep-all;
 }
@@ -942,7 +942,7 @@ button {
     font-size: clamp(12px, 1vw, 14px);
     display: flex;
     justify-content: space-between;
-    padding: 40px 0 50px 0;
+    padding: 20px 0 0 0;
 }
 
 .footer-right2 {
@@ -956,6 +956,7 @@ button {
 
 .footer-left {
     line-height: 2;
+    font-size: 14px;
     margin-bottom: 40px;
 }
 
@@ -967,22 +968,24 @@ button {
     width: clamp(180px, 13.5416vw, 260px);
 }
 
-.icon06 {
-    font-size: clamp(18px, 2.1428vw, 24px);
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.icon06>img {
-    width: clamp(26px, 2.8571vw, 40px);
-}
-
 .footer-right p {
+    line-height: 1.5;
     display: flex;
     justify-content: space-between;
 }
 
+.icon06 {
+    font-size: clamp(18px, 2.1428vw, 24px);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.icon06>img {
+    width: clamp(24px, 2.8571vw, 40px);
+}
+
 .footer-right-list p {
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
 }
@@ -992,9 +995,10 @@ button {
 }
 
 .footer-right2 img {
-    transform: translateY(-40px);
+    transform: translateY(-63%);
+    /* transform: translateX(0); */
     margin-left: 20px;
-    width: 66px;
+    width: clamp(40px, 3.9285vw, 55px)
 }
 
 @media(max-width:1160px) {
@@ -1259,16 +1263,10 @@ button {
     .footer {
         width: 100%;
         max-width: 1160px;
-        padding: 40px 0;
-        font-size: 13px;
     }
 
     .footer-left {
         margin-bottom: 20px;
-    }
-
-    .footer-bottom {
-        padding-bottom: 0;
     }
 
     .footer-bottom>p {
@@ -1277,7 +1275,6 @@ button {
 
     .icon06 {
         font-size: 24px;
-        margin-bottom: 10px;
     }
 }
 
@@ -1566,7 +1563,6 @@ button {
     }
 
     .footer-right2>img {
-        width: 44px;
         top: 15px;
         right: 160px;
     }
