@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+
+    alert("본 페이지는 개인 포토폴리오 입니다.")
+
     //    ----------헤더영역
     let $btn1 = $(".hambuger-btn");
     let $kvMenu = $(".header-nav");
