@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    alert("본 페이지는 개인 포토폴리오 입니다.")
+    alert("본 페이지는 개인 포토폴리오용 입니다.")
 
     //    ----------헤더영역
     let $btn1 = $(".hambuger-btn");
@@ -9,8 +9,8 @@ $(document).ready(function () {
     let $removeBtn1 = $(".close-btn");
 
     $btn1.on("click", function () {
-        $kvMenu.addClass("on");
         $btn1.addClass("hide");
+        $kvMenu.addClass("on");
         $removeBtn1.addClass("show");
     });
 
