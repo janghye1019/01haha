@@ -813,7 +813,7 @@ button {
 
 .sec06-img {
     width: clamp(150px, 31.4285vw, 430px);
-    background-image: url(../image/병아리\ 문의\ 1.png);
+    background-image: url(../image/병아리\ 문의\ 1.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
